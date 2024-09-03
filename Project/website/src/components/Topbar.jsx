@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { FaFacebookF } from "react-icons/fa";
 import { SiXstate } from "react-icons/si";
 import { SlSocialInstagram } from "react-icons/sl";
@@ -6,6 +7,7 @@ import { FaTiktok } from "react-icons/fa";
 import { SlSocialPintarest } from "react-icons/sl";
 import { FaAngleDown } from "react-icons/fa";
 import usLogo from '../assets/us.svg'
+
 
 function Topbar() {
   return (
@@ -31,6 +33,7 @@ function Topbar() {
 
         <div>
           <p>Time to refresh your wardrobe</p>
+          
         </div>
 
         <div className='flex gap-4 '>
