@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer componets{
+    .page{
+        @apply text-center bg-purple-600 text-white font-black text-3xl
+    }
+}
+
+.active{
+    text-decoration: underline;
+    color: red;
+}
+
