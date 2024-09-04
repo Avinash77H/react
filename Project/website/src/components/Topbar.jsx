@@ -17,8 +17,8 @@ function Topbar() {
   return (
     <div>
 
-      <div className='border-2 border-green-500 px-4  flex justify-between items-center'>
-        <div className='hidden lg:flex gap-4 '>
+      <div className='px-[40px]  flex justify-between items-center'>
+        <div className='hidden lg:flex gap-1 '>
           <div className='p-2 rounded-full bg-gray-300 hover:bg-blue-700 hover:text-white hover-transition'>
             <FaFacebookF />
           </div>
@@ -36,7 +36,7 @@ function Topbar() {
           </div>
         </div>
 
-        <div className='w-full lg:w-[33%] p-4'>
+        <div className='w-full lg:w-[33%]'>
           
           <MySlider/>
           

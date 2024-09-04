@@ -36,17 +36,6 @@ function MySlider() {
   ) 
 }
 
-const data=[
-  {content:'para - 1',
-    name:'milan'
-  },
-  {content:'para - 2',
-    name:'ugam'
-  },
-  {content:'para - 3',
-    name:'darshit'
-  }
-]
 
 
 export default MySlider
