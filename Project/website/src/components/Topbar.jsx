@@ -16,6 +16,7 @@ import MySlider from './MySlider';
 function Topbar() {
   return (
     <div>
+
       <div className='border-2 border-green-500 px-4  flex justify-between items-center'>
         <div className='hidden lg:flex gap-4 '>
           <div className='p-2 rounded-full bg-gray-300 hover:bg-blue-700 hover:text-white hover-transition'>
@@ -57,6 +58,7 @@ function Topbar() {
         </div>
 
       </div>
+      
     </div>
   )
 }

@@ -11,14 +11,10 @@ function Navbar() {
       <nav>
         <ul className='flex gap-4'>
             <li><Link to='/'>Home</Link></li>
-            <li><Link to='/About'>About</Link></li>
-            <li><Link to='/Shop'>Shop</Link></li>
-            
+            <li><Link to='/about'>About</Link></li>
+            <li><Link to='/shop'>Shop</Link></li>
         </ul>
-        {/* <a ><Link to='/Home'>Home</Link></a>
-        <a ><Link to='/About'>About</Link></a>
-        <a > <Link to='/Shop'>Shop</Link></a>
-        <a ><Link to='/Error'>Error</Link></a> */}
+        
        
         
       </nav>
