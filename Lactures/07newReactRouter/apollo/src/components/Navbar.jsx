@@ -8,6 +8,7 @@ function Navbar (){
             <div className='w-[10%]'>
                 <img className='' src={logo} alt="nav logo" />
             </div>
+
             <div>
                 <nav>
                     <ul className='flex gap-6'>
@@ -18,10 +19,11 @@ function Navbar (){
                     </ul>
                 </nav>
             </div>
-        </div>
-        <div>
+            </div>
+            
+            <div>
             <Outlet/>
-        </div>
+            </div>
         </div>
         
     )

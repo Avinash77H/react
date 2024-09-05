@@ -6,4 +6,8 @@
     .hover-transition{
         @apply transition-all duration-200 ease-in
     }
+
+    .navlink-hover{
+        @apply relative before:content-[''] before:absolute before:bottom-0 before:h-[2px] before:bg-black before:left-0 before:duration-300 before:w-0 hover:before:w-full
+    }
 }
