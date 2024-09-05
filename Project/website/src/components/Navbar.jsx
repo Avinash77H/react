@@ -1,12 +1,12 @@
 import React from 'react'
-import navLogo from '../assets/nav-logo.svg' 
+import navLogo from '../assets/nav-logo.svg'
 import { FaAngleDown } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { IoPersonOutline } from "react-icons/io5";
 import { FaRegHeart } from "react-icons/fa";
 import { RiShoppingBag2Line } from "react-icons/ri";
 import { VscThreeBars } from "react-icons/vsc";
-import {NavLink} from 'react-router-dom'
+import { NavLink, Outlet } from 'react-router-dom'
 
 
 export function Navbar() {
@@ -19,17 +19,18 @@ export function Navbar() {
           <VscThreeBars className='text-2xl'/>
         </button>
 
-            <a href="#" class="flex items-center space-x-3">
-            <img src={navLogo} class="h-3 sm:h-4 " alt="ecomus Logo" />
+            <a href="#" className="flex items-center space-x-3">
+            <img src={navLogo} className="h-3 sm:h-4 " alt="ecomus Logo" />
             </a>
 
       <ul className='hidden lg:flex gap-4 '>
         <li >
-          <a href="#" className="relative before:content-[''] before:absolute before:bottom-0 before:h-[2px] before:bg-black before:left-0 before:duration-300 before:w-0 hover:before:w-full">Home</a>
+          <NavLink to='/'>home</NavLink>
+          {/* <a href="#" className="relative before:content-[''] before:absolute before:bottom-0 before:h-[2px] before:bg-black before:left-0 before:duration-300 before:w-0 hover:before:w-full">Home</a> */}
         </li>
-       
+
         <li>
-          <NavLink to='/'>Home</NavLink>
+          <NavLink to='/shop'>shop</NavLink>
           {/* <a href="#" className='navlink-hover'>Shop</a> */}
         </li>
         <li>
@@ -52,10 +53,15 @@ export function Navbar() {
         </div>
       </nav>
 
-      {/* <div>
+      <div>
         <Outlet/>
-      </div> */}
+      </div>
     </div>
+
+
+  
+
+ 
   )
 }
 

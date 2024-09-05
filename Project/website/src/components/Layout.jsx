@@ -16,15 +16,15 @@ const List = createBrowserRouter([
         element:<Home/>
       },
       {
-        path:'/Shop',
+        path:'/shop',
         element:<Shop/>
       },
       {
-        path:'/Product',
+        path:'/product',
         element:<Product/>
       },
       {
-        path:'/Pages',
+        path:'/pages',
         element:<Pages/>
       }
     ]
@@ -35,7 +35,7 @@ const List = createBrowserRouter([
 function Layout() {
   return (
     <div>
-      <RouterProvider Route={List}></RouterProvider>
+      <RouterProvider router={List}></RouterProvider>
     </div>
   )
 }
