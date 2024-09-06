@@ -35,6 +35,7 @@ function HeroSlider() {
         </div>
         </div>
       </Slider>
+      
     </div>
   );
 }
