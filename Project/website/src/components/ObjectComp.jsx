@@ -1,10 +1,12 @@
 import Hero from './Hero'
 import HeroSlider from './HeroSlider'
 import Hover from './Hover'
+import MultipleItems from './MultipleItem'
 import MySlider from './MySlider'
 import Navbar from './Navbar'
 import Topbar from './Topbar'
-import Marquee from './Marquee'
+import Ticker from './ticker'
+import Card from './Card'
 
 export const ObjectComp={
     hero:<Hero/>,
@@ -13,5 +15,7 @@ export const ObjectComp={
     myslider:<MySlider/>,
     navbar:<Navbar/>,
     topbar:<Topbar/>,
-    marquee:<Marquee/>
+    ticker:<Ticker/>,
+    multipleitem:<MultipleItems/>,
+    card:<Card/>
 }
