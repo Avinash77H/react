@@ -17,16 +17,7 @@ function MySlider() {
 
   return (
     <div className=' w-full overflow-hidden'>
-        <Slider {...settings}>
-      {/* {
-        data.map((d)=>(
-
-          <div>
-             <p className=" text-center">{d.content}</p>
-          </div>
-        ))
-      } */}
-        
+        <Slider {...settings}>  
         <p className='inline text-center'>Spring Fashion Sale<button className='ml-2 text-red-500'>Shop now <MdArrowOutward className='inline text-red-500'/></button></p>
         <p className='text-center'>Summer sale discount off 70%</p>
         <p className='text-center'>Time to refresh your wardrobe.</p>

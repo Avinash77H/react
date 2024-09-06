@@ -1,10 +1,11 @@
 import React from 'react'
-import Home from './Home'
-import Shop from './Shop'
-import Product from './Products'
-import Pages from './Pages'
-import {createBrowserRouter,RouterProvider,Route} from 'react-router-dom'
 import Navbar from './Navbar'
+import Topbar from './Topbar'
+import { ObjectPages } from '../pages/ObjectPages'
+import {createBrowserRouter,RouterProvider,Route} from 'react-router-dom'
+
+
+
 
 const List = createBrowserRouter([
   {
@@ -13,31 +14,30 @@ const List = createBrowserRouter([
     children:[
       {
         path:'/',
-        element:<Home/>
+        element:ObjectPages.home
       },
       {
         path:'/shop',
-        element:<Shop/>
+        element:ObjectPages.shop
       },
       {
         path:'/product',
-        element:<Product/>
+        element:ObjectPages.product
       },
       {
         path:'/pages',
-        element:<Pages/>
+        element:ObjectPages.pages
       }
     ]
   }
 
 ])
 
-function Layout() {
+export default function LayoutTree(){
   return (
-    <div>
-      <RouterProvider router={List}></RouterProvider>
-    </div>
+    <RouterProvider router={List}>
+    </RouterProvider>
   )
 }
 
-export default Layout
+

@@ -1,13 +1,13 @@
 import React from 'react'
-import HeroSlider from './HeroSlider'
-import Navbar from './Navbar'
+import { ObjectComp } from '../components/ObjectComp'
+
 
 function Home() {
   return (
     <div>
        <div className="relative">
-        <Navbar />
-        <HeroSlider/>
+       {ObjectComp.heroslider}
+       
       </div>
     </div>
   )
