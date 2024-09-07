@@ -1,5 +1,10 @@
 import React from "react";
 import Slider from "react-slick";
+import Card from "./Card";
+
+
+
+
 
 function MultipleItems() {
   const settings = {
@@ -9,36 +14,15 @@ function MultipleItems() {
     slidesToShow: 3,
     slidesToScroll: 3
   };
+  // console.log("st",props.product);
   return (
     <div className="slider-container">
       <Slider {...settings}>
         <div>
-          <h3>1</h3>
-        </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
-        <div>
-          <h3>7</h3>
-        </div>
-        <div>
-          <h3>8</h3>
-        </div>
-        <div>
-          <h3>9</h3>
-        </div>
+         {/* {productList.map((current)=>{
+          return <Card details={current} ></Card>
+         })} */}
+      </div>
       </Slider>
     </div>
   );
