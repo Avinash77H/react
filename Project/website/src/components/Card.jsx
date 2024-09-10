@@ -2,7 +2,7 @@ import React from "react";
 import { MdArrowOutward } from "react-icons/md";
 import defaultimg from "../assets/fashion.jpg";
 
-function Card({details
+function Card({details    
 
 }) {
   return (
