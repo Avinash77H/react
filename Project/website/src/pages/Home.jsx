@@ -4,13 +4,13 @@ import { ObjectComp } from '../components/ObjectComp'
 import { MdArrowOutward } from "react-icons/md";
 import Card from '../components/Card'
 import MultipleItems from '../components/MultipleItem';
-
 import Slider from "react-slick";
 import fashion from '../assets/fashion.jpg'
 import bags from '../assets/bags.jpg'
 import accessories from '../assets/accessories.jpg'
 import cloth from '../assets/clothing.jpg'
 import sunglass from '../assets/sunglasses.jpg'
+import HeroSlider from '../components/HeroSlider'
 
 
 const productList = [{
@@ -41,27 +41,27 @@ function Home() {
     slidesToShow: 3,
     slidesToScroll: 3
   };
-  return (
-    <div>
-      <div className="relative">
-        {/* {ObjectComp.heroslider}
-        {ObjectComp.ticker}
-        {ObjectComp.multipleitem} */}
-        {/* <Card product={product}/> */}
   
-        <div className="slider-container">z
+  return (
+    <>
+      <HeroSlider />
+
+      <div className="relative">  
+
+        <div className="slider-container">
           <Slider {...settings}>
             {
               productList.map((currentItem)=>{
-                return <Card details={currentItem}/>
+                return <Card key={currentItem}  details={currentItem}/>
               })
             }
-        
           </Slider>
         </div>
 
+        
+     
       </div>
-    </div>
+    </>
   )
 }
 

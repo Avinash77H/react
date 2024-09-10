@@ -1,10 +1,8 @@
 import React from "react";
 import { MdArrowOutward } from "react-icons/md";
-import defaultimg from "../assets/fashion.jpg";
 
-function Card({details    
 
-}) {
+function Card({details}) {
   return (
     <div>
       <div className="border-2 border-green-500 relative">
