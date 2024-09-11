@@ -2,16 +2,21 @@ import React, { useState } from "react";
 import { createContext } from "react";
 import Component2 from "./Component2";
 
-const UserContext = createContext();
-function Component1() {
-  const [name, setName] = useState("avinash");
+const ownContext = createContext();
 
+export const name = 'abhishek sir is good teacher'
+export const work = 'bak bak kare'
+function Component1({children}) {
+ 
 
   return (
     <>
-      <UserContext.Provider value={name}>
-        <Component2 />
-      </UserContext.Provider>
+      <ownContext.Provider value={name}>
+       
+        {/* <Component2 /> */}
+        {children}
+       
+      </ownContext.Provider>
     </>
   );
 }
