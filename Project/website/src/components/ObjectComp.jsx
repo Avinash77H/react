@@ -7,6 +7,7 @@ import Navbar from './Navbar'
 import Topbar from './Topbar'
 import Ticker from './ticker'
 import Card from './Card'
+import Layout from './Layout'
 
 export const ObjectComp={
     hero:<Hero/>,
@@ -17,5 +18,6 @@ export const ObjectComp={
     topbar:<Topbar/>,
     ticker:<Ticker/>,
     multipleitem:<MultipleItems/>,
-    card:<Card/>
+    card:<Card/>,
+    layout:<Layout/>
 }
