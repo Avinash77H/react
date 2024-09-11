@@ -13,6 +13,8 @@ function App() {
       <Ex1/>
       </data1.Provider>
     </>
+
+    
   )
 }
 
