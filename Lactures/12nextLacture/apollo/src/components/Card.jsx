@@ -1,6 +1,7 @@
-import React from 'react'
-
-function Card({color}) {
+import React, { useContext } from 'react'
+import { theme } from '../App';
+function Card() {
+  const color=useContext(theme);
   return (
     <div className={`w-[300px] rounded-md border ${color}`}>
     <img

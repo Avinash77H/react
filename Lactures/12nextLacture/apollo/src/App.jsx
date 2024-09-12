@@ -1,9 +1,11 @@
 import react, {createContext, useState } from 'react'
-import Fun from './components/Fun';
+
+
 import Card from './components/Card';
 import Button from './components/Button';
 
 export const theme = createContext();
+export const changeMethod = createContext()
 function App() {
   
   const [color1,setColor] = useState()
@@ -19,17 +21,15 @@ function App() {
       setCount(true)
     }
  }
-
-  
   return (
     <>
-    <theme.Provider >
+    <theme.Provider value={color1}>
+    <changeMethod.Provider value={toggle}>
 
-    <Card color={color1}/>
-    <Button method={toggle}/>
-
+    <Card />
+    <Button/>
+    </changeMethod.Provider>
     </theme.Provider>
-
     </>
   )
 }
