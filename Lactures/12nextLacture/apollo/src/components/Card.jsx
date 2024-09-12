@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Card() {
+function Card({color}) {
   return (
-    <div className="w-[300px] rounded-md border">
+    <div className={`w-[300px] rounded-md border ${color}`}>
     <img
       src="https://images.unsplash.com/photo-1522199755839-a2bacb67c546?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJsb2d8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
       alt="Laptop"
@@ -28,7 +28,7 @@ function Card() {
       </div>
       <button
         type="button"
-        className="mt-4 w-full rounded-sm bg-black px-2 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 "
+        className="mt-4 w-full rounded-sm bg-black px-2 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80"
       >
         mode
       </button>

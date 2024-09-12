@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 
-function Fun({fun}) {
-  
+function Fun({fun,children,setMethod}) {
+    const handleClick = (event)=>{
+      console.log(event);
+    }
     return (
   <>
     <h1>this is fun component</h1>
-    <p>{fun()}</p>
-    {/* <button onClick={fun}>click me</button> */}
+    {children}
+    <p onClick={handleClick}>{fun}</p>
   </>
   )
 }

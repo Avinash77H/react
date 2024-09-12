@@ -46,21 +46,6 @@ function Home() {
     <>
       <HeroSlider />
 
-      {/* <div className="relative">  
-
-        <div className="slider-container">
-          <Slider {...settings}>
-            {
-              productList.map((currentItem)=>{
-                return <Card key={currentItem}  details={currentItem}/>
-              })
-            }
-          </Slider>
-        </div>
-
-        
-     
-      </div> */}
     </>
   )
 }
