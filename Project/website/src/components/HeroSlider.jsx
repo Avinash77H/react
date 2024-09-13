@@ -15,7 +15,7 @@ function HeroSlider() {
   };
 
   return (
-    <div className="slider-container border-2 border-purple-500 relative">
+    <div className="slider-container border-2 border-purple-500 relative overflow-hidden">
 
       <div className="absolute z-[999] top-[35%] left-0 p-2 ml-12 ">
         <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-7xl font-normal mb-4 md:mb-0 ">Glamorous <br /> Glam</h1>
@@ -23,7 +23,7 @@ function HeroSlider() {
         <button className="flex items-center self-start gap-2 bg-black text-white p-1  sm:p-2 md:p-3">Shop collection<IoIosArrowForward /></button>
       </div>
 
-      <Slider {...settings}>
+      <Slider {...settings} className="HeroSlider">
         <div>
           <div className='bg-cover bg-center bg-no-repeat border-2  h-screen ' style={{ backgroundImage: `url(${slide1})` }}>
             

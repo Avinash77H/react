@@ -5,7 +5,7 @@ import MultipleItems from './MultipleItem'
 import MySlider from './MySlider'
 import Navbar from './Navbar'
 import Topbar from './Topbar'
-import Ticker from './ticker'
+import Ticker from './Marquee'
 import Card from './Card'
 import Layout from './Layout'
 

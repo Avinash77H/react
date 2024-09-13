@@ -1,6 +1,9 @@
 import React from "react";
 import Navbar from "./Navbar";
-import Topbar from "./Topbar";
+import Home from '../pages/Home'
+import Shop from '../pages/Pages'
+import Product from '../pages/Product'
+import Pages from '../pages/Pages'
 import { ObjectPages } from "../pages/ObjectPages";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 
@@ -11,19 +14,19 @@ const List = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: ObjectPages.home,
+        element: <Home/>
       },
       {
         path: "/shop",
-        element: ObjectPages.shop,
+        element: <Shop/>
       },
       {
         path: "/product",
-        element: ObjectPages.product,
+        element: <Product/>
       },
       {
         path: "/pages",
-        element: ObjectPages.pages,
+        element:<Pages/>
       },
     ],
   },
