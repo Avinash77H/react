@@ -11,6 +11,9 @@ import accessories from '../assets/accessories.jpg'
 import cloth from '../assets/clothing.jpg'
 import sunglass from '../assets/sunglasses.jpg'
 import HeroSlider from '../components/HeroSlider'
+import Marquee from '../components/Marquee';
+
+import Categories from '../components/Categories';
 
 
 const productList = [{
@@ -45,6 +48,9 @@ function Home() {
   return (
     <>
       <HeroSlider />
+      <Marquee/>
+      <MultipleItems/>
+      <Categories/>
 
     </>
   )

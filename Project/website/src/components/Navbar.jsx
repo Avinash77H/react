@@ -11,7 +11,7 @@ import { NavLink, Outlet } from 'react-router-dom'
 export function Navbar() {
   return (
     <>
-      <div className='px-[40px] w-full border-2 border-green-500'>
+      <div className='px-[40px] w-full '>
 
         <nav>
           <div className='flex justify-between items-center'>
