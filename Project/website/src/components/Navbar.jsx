@@ -7,11 +7,13 @@ import { FaRegHeart } from "react-icons/fa";
 import { RiShoppingBag2Line } from "react-icons/ri";
 import { VscThreeBars } from "react-icons/vsc";
 import { NavLink, Outlet } from 'react-router-dom'
+import HeroSlider from './HeroSlider';
 
 export function Navbar() {
   return (
     <>
-      <div className='px-[40px] w-full '>
+
+      <div className='px-[40px] w-full absolute top-[30px] z-[1000]'>
 
         <nav>
           <div className='flex justify-between items-center'>
@@ -48,14 +50,14 @@ export function Navbar() {
           </div>
         </nav>
 
-
-
+        <HeroSlider/>
 
       </div>
 
-      <div>
+
+    
         <Outlet />
-      </div>
+     
     </>
 
 

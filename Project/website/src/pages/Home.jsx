@@ -35,7 +35,6 @@ const productList = [{
   image: sunglass
 }]
 
-
 function Home() {
   const settings = {
     dots: true,
@@ -47,11 +46,10 @@ function Home() {
   
   return (
     <>
-      <HeroSlider />
-      <Marquee/>
-      <MultipleItems/>
+      {/* <HeroSlider /> */}
+      {/* <Marquee/> */}
+      {/* <MultipleItems/> */}
       <Categories/>
-
     </>
   )
 }
