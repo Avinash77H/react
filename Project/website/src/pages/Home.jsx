@@ -46,8 +46,8 @@ function Home() {
   
   return (
     <>
-      {/* <HeroSlider /> */}
-      {/* <Marquee/> */}
+      <HeroSlider />
+      <Marquee/>
       {/* <MultipleItems/> */}
       <Categories/>
     </>

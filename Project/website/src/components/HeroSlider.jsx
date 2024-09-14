@@ -26,7 +26,7 @@ function HeroSlider() {
   };
 
   return (
-    <div className="slider-container  overflow-hidden max-lg:max-h-[450px]">
+    <div className="slider-container  overflow-hidden ">
       <Slider {...settings} className="HeroSlider relative">
         <div>
           <div className='bg-cover bg-center bg-no-repeat border-2  h-screen relative ' style={{ backgroundImage: `url(${slide1})` }}>
