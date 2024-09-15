@@ -12,24 +12,24 @@ import sunglass from "../assets/sunglasses.jpg";
 
 const productList = [
   {
-    name: "Fashion1",
-    image: fashion,
-  },
-  {
-    name: "Bags2",
-    image: bags,
-  },
-  {
-    name: "Accessories3",
-    image: accessories,
-  },
-  {
-    name: "Cloth4",
+    name: "Clothing",
     image: cloth,
   },
   {
-    name: "Sunglass5",
+    name: "Sunglasses",
     image: sunglass,
+  },
+  {
+    name: "Bags",
+    image: bags,
+  },
+  {
+    name: "Fashion",
+    image: fashion,
+  },
+  {
+    name: "Accessories",
+    image: accessories,
   },
 ];
 
