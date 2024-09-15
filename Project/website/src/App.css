@@ -35,3 +35,22 @@
     border-radius: 50%;
     background-color:rgb(196, 181, 181);
 }
+
+/* product cards slider*/
+
+.slick-prev{
+    background-color: black;
+    top: -65px;
+    left: 10px;
+}
+.slick-prev:hover{
+    background-color: black;
+}
+.slick-next{
+    background-color: black;
+    top: -65px;
+    left: 50px;
+}
+.slick-next:hover{
+    background-color: black;
+}

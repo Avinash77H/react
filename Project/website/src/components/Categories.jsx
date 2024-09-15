@@ -1,32 +1,78 @@
-import React from 'react'
+import React from "react";
+import Slider from "react-slick";
+import Card from "./Card";
 import { CiCircleChevLeft } from "react-icons/ci";
 import { CiCircleChevRight } from "react-icons/ci";
 import { MdArrowOutward } from "react-icons/md";
+import fashion from "../assets/fashion.jpg";
+import bags from "../assets/bags.jpg";
+import accessories from "../assets/accessories.jpg";
+import cloth from "../assets/clothing.jpg";
+import sunglass from "../assets/sunglasses.jpg";
+
+const productList = [
+  {
+    name: "Fashion1",
+    image: fashion,
+  },
+  {
+    name: "Bags2",
+    image: bags,
+  },
+  {
+    name: "Accessories3",
+    image: accessories,
+  },
+  {
+    name: "Cloth4",
+    image: cloth,
+  },
+  {
+    name: "Sunglass5",
+    image: sunglass,
+  },
+];
 
 function Categories() {
+  const settings = {
+    focusOnSelect: true,
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 2,
+    speed: 500,
+  };
   return (
-    <div className='border-2 border-green-500 '>
-      <div className='flex items-center gap-2'>
-        <div className='rounded-full w-8 h-8 '>
-          < CiCircleChevLeft className='w-full h-full '/>
-        </div>
-        <div className='rounded-full w-8 h-8'>
-        <CiCircleChevRight className='w-full h-full'/>
-        </div>
-        <span>SHOP BY CATEGORIES</span>
+    <div>
+      <div className="flex items-center gap-2 mt-4 ml-16">
+        <div className="rounded-full  "></div>
+        <div className="rounded-full "></div>
+        <span className="ml-[50px]">SHOP BY CATEGORIES</span>
       </div>
 
-      <div className='border-2 border-black px-12 flex'>
-        <div className='border-2 border-red-500 py-[200px] w-[75%] '></div>
-        <div className='border-2 border-green-500 py-[200px] w-[25%] flex flex-col  justify-between'>
-          <div className='empty-div'></div>
-          <p>Discovery all <br />new items</p>
-          <MdArrowOutward className='border-2 border-black rounded-full ' />
+      <div className=" px-12 flex justify-around">
+        <div className="w-[75%] pt-[50px]">
+          <Slider {...settings}>
+            {productList.map((item) => {
+              return (
+                <div>
+                  <Card details={item} />
+                </div>
+              );
+            })}
+          </Slider>
+        </div>
+        <div className="border-2 border-black rounded-xl  px-8 pt-8 mt-16">
+          <p className=" text-4xl font-normal pt-40">
+            Discovery all <br />
+            new items
+          </p>
+          <a href="">
+            <MdArrowOutward className="border-2 border-black rounded-full mt-4 h-12 w-12 " />
+          </a>
         </div>
       </div>
-      
     </div>
-  ) 
+  );
 }
 
-export default Categories
+export default Categories;
