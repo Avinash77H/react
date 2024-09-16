@@ -10,9 +10,9 @@ import grid8 from "../assets/grid8.jpg";
 
 function GridSeller() {
   return (
-    <div>
-      <h2>Best Seller</h2>
-      <p>
+    <div className="mt-20">
+      <h2 className="text-5xl text-center">Best Seller</h2>
+      <p className="text-center my-4">
         Shop the Latest Styles: Stay ahead of the curve with our newest arrivals
       </p>
      <div className="grid grid-cols-4 gap-4">
