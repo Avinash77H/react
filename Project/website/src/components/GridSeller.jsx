@@ -10,12 +10,12 @@ import grid8 from "../assets/grid8.jpg";
 
 function GridSeller() {
   return (
-    <div className="mt-20">
-      <h2 className="text-5xl text-center">Best Seller</h2>
-      <p className="text-center my-4">
+    <div className="mt-20 text-center">
+      <h2 className="text-2xl md:text-5xl text-center">Best Seller</h2>
+      <p className="text-md md:text-xl text-center my-4">
         Shop the Latest Styles: Stay ahead of the curve with our newest arrivals
       </p>
-     <div className="grid grid-cols-4 gap-4">
+     <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-4 px-12">
       {/* card 1 */}
       <div>
         <div>
@@ -151,6 +151,8 @@ function GridSeller() {
       </div>
 
      </div>
+
+     <button className="px-4 py-2 border-2 border-black mt-16 font-medium hover:!border-red-500 hover:text-red-500 hover:duration-200">Load more</button>
     </div>
   );
 }

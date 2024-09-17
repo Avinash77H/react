@@ -1,8 +1,8 @@
 .ticker-wrap{
     border:2px solid red;
     overflow: hidden;
-    
 }
+
 
 .marquee-animation{
     
@@ -39,9 +39,7 @@
 /* product cards slider*/
 
 .slick-prev{
-    /* border: 2px solid blue;
-    border-radius: 50%;
-    padding:10px; */
+    
     background-color: black;
     top: -65px;
     left: 10px;
@@ -57,3 +55,5 @@
 .slick-next:hover{
     background-color: black;
 }
+
+
