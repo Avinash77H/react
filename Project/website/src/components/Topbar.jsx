@@ -52,9 +52,6 @@ function Topbar() {
             <p>English</p>
             <FaAngleDown/>
           </div>
-
-          
-
         </div>
 
       </div>

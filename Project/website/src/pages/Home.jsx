@@ -6,6 +6,10 @@ import GridSeller from '../components/GridSeller';
 import Categories from '../components/Categories';
 import Look from '../components/Look';
 import Client from '../components/Client';
+import Swiper from '../components/Swiper';
+import ShopGram from '../components/ShopGram';
+import IconContainer from '../components/IconContainer';
+import Footer from '../components/Footer';
 
 
 
@@ -26,6 +30,10 @@ function Home() {
       <GridSeller/>
       <Look/>
       <Client/>
+      <Swiper/>
+      <ShopGram/>
+      <IconContainer/>
+      <Footer/>
     </>
   )
 }

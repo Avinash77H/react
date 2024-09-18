@@ -45,7 +45,7 @@ function Client() {
   };
 
   return (
-    <div className="mt-24 p-8">
+    <div className="mt-24 p-8 mx-2">
       <h2 className="text-2xl md:text-5xl text-center">Happy Clients</h2>
       <p className="text-md md:text-xl text-center mt-4 mb-20">
         Hear what they say about us
