@@ -9,7 +9,7 @@ import brand6 from "../assets/brand-06.png";
 
 function Swiper() {
   var settings = {
-    dots: true,
+    dots: false,
     infinite: false,
     speed: 500,
     slidesToShow: 4,
@@ -21,7 +21,7 @@ function Swiper() {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          infinite: true,
+          infinite: false,
           dots: true,
         },
       },
@@ -36,7 +36,7 @@ function Swiper() {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
         },
       },
@@ -45,17 +45,19 @@ function Swiper() {
 
   const brands = [brand1, brand2, brand3, brand4, brand5, brand6];
   return (
-    <>
-      <div className="swiper-container border mx-12 mt-24 flex">
-        {brands.map((item) => {
-          return (
-            <div className="border">
-              <img src={item} alt="brand-1" />
-            </div>
-          );
-        })}
-      </div>
-    </>
+   
+       <div className="swiper-container border rounded-xl mx-8 md:mx-16 mt-24 ">
+        <Slider {...settings}>
+          {brands.map((item) => {
+            return ( 
+              <div className="border-r">
+                <img src={item} alt="brand-1" className="py-8 px-2 mx-auto "/>
+              </div> 
+            );
+          })}
+        </Slider>
+      </div> 
+    
   );
 }
 

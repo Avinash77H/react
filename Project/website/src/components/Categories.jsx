@@ -68,12 +68,12 @@ function Categories() {
     <div className="slider-container">
       <div className="">
         <div className="flex items-center gap-2 mt-4 ml-16">
-          <div className="rounded-full"></div>
-          <div className="rounded-full"></div>
-          <span className="ml-16 mb-1">SHOP BY CATEGORIES</span>
+          <div className="rounded-full "><CiCircleChevLeft className="w-8 h-8"/></div>
+          <div className="rounded-full "><CiCircleChevRight className="w-8 h-8"/></div>
+          <span className=" mb-1">SHOP BY CATEGORIES</span>
         </div>
 
-        <div className=" px-12 flex flex-col items-center xl:flex-row justify-around border-2 border-purple-500 ">
+        <div className=" px-12 flex flex-col items-center xl:flex-row justify-around  ">
           <div className="w-3/4 pt-12 place-self-auto categories-slider">
             <Slider {...settings}>
               {productList.map((item) => {
