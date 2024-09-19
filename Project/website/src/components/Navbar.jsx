@@ -8,11 +8,9 @@ import { RiShoppingBag2Line } from "react-icons/ri";
 import { VscThreeBars } from "react-icons/vsc";
 import { NavLink, Outlet } from 'react-router-dom'
 
-
 export function Navbar() {
   return (
     <>
-    
       <div className=' w-full top-[30px] z-[1000]'>
         <nav>
           <div className='flex justify-between items-center px-[40px]'>
@@ -35,7 +33,7 @@ export function Navbar() {
                 <NavLink to='/product' className="navlink-hover">Product</NavLink>
               </li>
               <li>
-                <NavLink to='/pages' className="navlink-hover">Pages</NavLink>
+                <NavLink to='/pages' className="navlink-hover">Pages<FaAngleDown className='inline'/></NavLink>
               </li>
             </ul>
 
@@ -45,7 +43,6 @@ export function Navbar() {
               <a href="#" className='relative  hidden md:block'><FaRegHeart className='w-[25px] h-[25px]  hover:text-red-600' /><span className='bg-red-700  rounded-full text-white px-[6px] absolute -top-1 -right-2 text-[12px]'>0</span></a>
               <a href="#" className='relative'><RiShoppingBag2Line className='w-[25px] h-[25px]' /><span className='bg-red-700  rounded-full text-white px-[6px] absolute -top-1 -right-1 text-[12px]'>0</span></a>
             </div>
-
           </div>
         </nav>
 
