@@ -1,11 +1,13 @@
 import React from "react";
 import Navbar from "./Navbar"; 
 import Home from '../pages/Home'
-import Shop from '../pages/Pages'
+import Shop from '../pages/Shop'
 import Product from '../pages/Product'
-import Pages from '../pages/Pages'
-import { ObjectPages } from "../pages/ObjectPages";
-import HomeLayout from "./HomeLayout";
+import AboutUs from "../pages/AboutUs";
+import FAQ from '../pages/FAQ'
+import Contact from "../pages/Contact";
+import Checkout from "../pages/Checkout";
+import BuyNow from "../pages/BuyNow";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 
 const List = createBrowserRouter([
@@ -26,8 +28,24 @@ const List = createBrowserRouter([
         element: <Product/>
       },
       {
-        path: "/pages",
-        element:<Pages/>
+        path: "/aboutUs",
+        element:<AboutUs/>
+      },
+      {
+        path: "/faq",
+        element:<FAQ/>
+      },
+      {
+        path: "/contactUs",
+        element:<Contact/>
+      },
+      {
+        path: "/checkout",
+        element:<Checkout/>
+      },
+      {
+        path: "/buyNow",
+        element:<BuyNow/>
       },
     ],
   },
