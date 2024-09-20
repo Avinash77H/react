@@ -1,5 +1,6 @@
 import React from 'react'
 import '../App.css'
+import Topbar from '../components/Topbar'
 import HeroSlider from '../components/HeroSlider'
 import Marquee from '../components/Marquee';
 import GridSeller from '../components/GridSeller';
@@ -24,6 +25,7 @@ function Home() {
   
   return (
     <>
+      <Topbar />
       <HeroSlider />
       <Marquee/>
       <Categories/>

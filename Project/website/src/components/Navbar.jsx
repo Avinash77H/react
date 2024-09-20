@@ -12,7 +12,7 @@ import { IoIosArrowForward } from "react-icons/io";
 export function Navbar() {
   return (
     <>
-      <div className=" w-full top-[30px] z-[1000]">
+      <div className=" w-full top-[30px] z-[1000] mt-2">
         <nav>
           <div className="flex justify-between items-center px-[40px]">
             <button className="lg:hidden">
@@ -82,7 +82,7 @@ export function Navbar() {
                 </span>
               </a>
               <a href="#" className="relative">
-                <RiShoppingBag2Line className="w-[25px] h-[25px]" />
+                <RiShoppingBag2Line className="w-[25px] h-[25px] hover:text-red-600" />
                 <span className="bg-red-700  rounded-full text-white px-[6px] absolute -top-1 -right-1 text-[12px]">
                   0
                 </span>

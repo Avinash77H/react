@@ -1,12 +1,13 @@
-import Topbar from "./components/Topbar"
+
 import Layout from './components/Layout'
+import Shop from './pages/Shop'
+
 
 function App() {
   return (
     <div >
-      <Topbar />
       <Layout/>
-      
+     
     </div>
   )
 }

@@ -18,7 +18,7 @@ import { FaPlus } from "react-icons/fa6";
 function Footer() {
   return (
     <div>
-      <div className="upper-container border-y border-gray-300 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-y-12  md:mx-4 p-4 mt-12 mx-4">
+      <div className="upper-container border-y border-gray-300 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-y-12  md:mx-4 p-4 mt-12 mx-4 ">
         <div className="flex flex-col gap-4 ">
           <a href="#" className="flex items-center space-x-3">
             <img src={footerLogo} className="h-3 sm:h-4 " alt="ecomus Logo" />
@@ -55,13 +55,13 @@ function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4">
-          <div className="special md:hidden flex justify-between item">
+        <div className="flex flex-col gap-4 ">
+          <div className=" md:hidden flex justify-between item">
             <h6 className="text-xl font-semibold">Help</h6>
             <FaPlus />
           </div>
-          <h6 className="text-xl font-semibold hidden lg:block">Help</h6>
-          <ul className="hidden flex-col gap-2 lg:flex">
+          <h6 className="text-xl font-semibold hidden md:block">Help</h6>
+          <ul className="hidden flex-col gap-2 md:flex">
             <li>
               <a href="">Privacy Policy</a>
             </li>
@@ -86,13 +86,13 @@ function Footer() {
           </ul>
         </div>
 
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 ">
         <div className="special md:hidden flex justify-between item">
             <h6 className="text-xl font-semibold">About us</h6>
             <FaPlus />
           </div>
-          <h6 className="text-xl font-semibold hidden lg:block">About us</h6>
-          <ul className="hidden flex-col gap-2  lg:block">
+          <h6 className="text-xl font-semibold hidden md:block">About us</h6>
+          <ul className="hidden flex-col gap-2  md:block">
             <li>
               <a href="">Our Story</a>
             </li>
@@ -108,18 +108,18 @@ function Footer() {
           </ul>
         </div>
 
-        <div className="flex flex-col gap-4">
-        <div className="special md:hidden flex justify-between item">
+        <div className="flex flex-col gap-4 ">
+        <div className="md:hidden flex justify-between item">
             <h6 className="text-xl font-semibold">Sign Up for Email</h6>
             <FaPlus />
           </div>
-          <h6 className="text-xl font-semibold hidden lg:block">Sign Up for Email</h6>
-          <p className="hidden lg:block">
+          <h6 className="text-xl font-semibold hidden md:block">Sign Up for Email</h6>
+          <p className="hidden md:block">
             Sign up to get first dibs on new arrivals, sales, exclusive content,
             events and more!
           </p>
 
-          <fieldset className="hidden  border border-gray-500 px-2  lg:flex">
+          <fieldset className="hidden border-2 border-gray-400 px-2 md:inline-flex">
             <input
               type="text"
               placeholder="Enter your email..."
@@ -131,7 +131,7 @@ function Footer() {
             </button>
           </fieldset>
 
-          <div className="hidden lg:flex gap-4 ">
+          <div className="hidden md:flex gap-4 ">
             <div className=" flex items-center gap-1 cursor-pointer">
               <img src={usLogo} alt="uslogo" className="inline w-4"/>
               <p>USD</p>
