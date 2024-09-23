@@ -12,9 +12,9 @@ import { IoIosArrowForward } from "react-icons/io";
 export function Navbar() {
   return (
     <>
-      <div className=" w-full top-[30px] z-[1000] mt-2">
+      <div className=" w-full top-[30px] z-[1000] mt-4 ">
         <nav>
-          <div className="flex justify-between items-center px-[40px]">
+          <div className="flex justify-between items-center px-8">
             <button className="lg:hidden">
               <VscThreeBars className="text-2xl" />
             </button>
