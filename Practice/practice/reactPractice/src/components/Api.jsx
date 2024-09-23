@@ -26,7 +26,12 @@ function Api() {
         {data.map((item) => {
           return  <div>
           {inputValue === item.name ? (
-            <p>{item.name}</p>
+            
+            <div className="flex flex-col items-center gap-2  border ">
+
+              <img src={item.image} className="h-24 w-24 flex "></img>
+               <p>{item.name}</p>
+            </div>
           ) : (
             console.log('not found ')
           )}
