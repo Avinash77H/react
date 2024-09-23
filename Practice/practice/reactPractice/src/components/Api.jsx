@@ -28,7 +28,7 @@ function Api() {
           {inputValue === item.name ? (
             <p>{item.name}</p>
           ) : (
-            console.log('not found')
+            console.log('not found ')
           )}
         </div>
            
