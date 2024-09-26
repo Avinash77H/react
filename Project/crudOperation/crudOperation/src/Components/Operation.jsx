@@ -10,6 +10,7 @@ function Operation() {
   return (
     <div classNameName='border border-red-500'>
           <div className="p-8 border-2 border-green-500 ">
+            
         <h1 className="p-4 text-4xl">Read Records</h1>
         <hr></hr>
 
@@ -141,11 +142,7 @@ function Operation() {
         </table>
      </div>
 
-        
         <div className="mt-4 flex justify-between flex-wrap gap-4">
-           
-           
-               
                 <div>
                     <nav className="isolate inline-flex -space-x-px rounded-md shadow-sm" aria-label="Pagination">
                         <a href="#"
@@ -184,8 +181,6 @@ function Operation() {
                         Go
                     </div>
                 </div>
-
-          
         </div>
 
     </div>

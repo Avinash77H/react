@@ -8,6 +8,7 @@ import aboutSlider2 from "../assets/aboutSlider2.jpg";
 function AboutUs() {
   return (
     <div className="mt-4 ">
+      
       {/* hero section */}
       <div
         className="bg-cover bg-center py-96"
@@ -34,8 +35,8 @@ function AboutUs() {
 
       <div className=" flex mx-8 mt-24">
         <div
-          style={{ backgroundImage: `url(${about2})` }}
           className="w-1/2 lg:py-52 xl:py-80 bg-cover bg-no-repeat bg-center"
+          style={{ backgroundImage: `url(${about2})` }}
         ></div>
         <div className="w-1/2 flex flex-col justify-center items-start  gap-4 py-12 px-20">
           <h5 className="text-3xl">Established - 1995</h5>
@@ -49,6 +50,7 @@ function AboutUs() {
           </p>
         </div>
       </div>
+
     </div>
   );
 }
