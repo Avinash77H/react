@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  th,td{
+    @apply p-4
+  }
+    
+}
+
+/* @layer components{
+    .chameli{
+       padding: 16px;
+       @apply p-4
+    }
+}
+ */
