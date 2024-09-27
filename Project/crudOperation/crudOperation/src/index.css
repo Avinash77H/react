@@ -3,16 +3,14 @@
 @tailwind utilities;
 
 @layer base {
-  th,td{
-    @apply p-4
+  th,
+  td {
+    @apply p-4;
   }
-    
 }
 
-/* @layer components{
-    .chameli{
-       padding: 16px;
-       @apply p-4
-    }
+@layer components {
+  .btn {
+    @apply px-4 py-2 border-none text-white bg-red-500 rounded-md;
+  }
 }
- */
