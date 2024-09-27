@@ -33,7 +33,7 @@ function AboutUs() {
         </div>
       </div>
 
-      <div className=" flex mx-8 mt-24">
+      <div className=" flex mx-8 mt-24 ">
         <div
           className="w-1/2 lg:py-52 xl:py-80 bg-cover bg-no-repeat bg-center"
           style={{ backgroundImage: `url(${about2})` }}
