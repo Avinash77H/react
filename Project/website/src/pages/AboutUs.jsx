@@ -5,6 +5,9 @@ import about3 from "../assets/about3.jpg";
 import about4 from "../assets/about4.jpg";
 import aboutSlider1 from "../assets/aboutSlider1.jpg";
 import aboutSlider2 from "../assets/aboutSlider2.jpg";
+import { PiLeaf } from "react-icons/pi";
+import { MdOutlineDiamond } from "react-icons/md";
+import { PiTriangleBold } from "react-icons/pi";
 
 function AboutUs() {
   return (
@@ -40,7 +43,7 @@ function AboutUs() {
         ></div>
         <div className="w-full flex flex-col justify-center items-start  gap-4 py-12 ">
           <h5 className="text-3xl ">Established - 1995</h5>
-          <p className="text-gray-500 text-sm xl:text-lg">
+          <p className="text-gray-500 text-sm xl:text-lg text-center md:text-start">
             Ecomus was founded in 1995 by Jane Smith, a fashion lover with a
             passion for timeless style. Jane had always been drawn to classic
             pieces that could be worn season after season, and she believed that
@@ -51,7 +54,7 @@ function AboutUs() {
         </div>
       </div>
 
-      <div className=" flex mx-8 mt-24 flex-col-reverse md:flex-row-reverse md:gap-8 justify-center border-2 border-green-500">
+      <div className=" flex mx-8 mt-24 flex-col-reverse md:flex-row-reverse md:gap-8 justify-center">
         <div
           className="w-3/4 md:w-[40%]   bg-cover bg-no-repeat bg-center aspect-square relative"
           style={{ backgroundImage: `url(${about3})` }}
@@ -65,13 +68,47 @@ function AboutUs() {
 
         <div className="w-full md:w-[40%] flex flex-col justify-center items-center md:items-start  gap-4 py-12">
           <h5 className="text-3xl ">Our mission</h5>
-          <p className="text-gray-500 text-sm xl:text-lg">
+          <p className="text-gray-500 text-center md:text-start text-sm xl:text-lg">
             Our mission is to empower people through sustainable fashion. We
             want everyone to look and feel good, while also doing our part to
             help the environment.We believe that fashion should be stylish,
             affordable and accessible to everyone. Body positivity and
             inclusivity are values that are at the heart of our brand.
           </p>
+        </div>
+      </div>
+
+      {/* priority  */}
+      <div className="text-center border-2 border-green-500 mt-32 bg-orange-100  p-8 md:p-20">
+        <h2 className="text-2xl lg:text-4xl font-semibold">Quality is our priority</h2>
+        <p className="text-sm xl:text-xl mt-8">
+          Our talented stylists have put together outfits that are perfect for
+          the season. They've variety of ways to inspire your next
+          fashion-forward look.
+        </p>
+
+        <div className="text-center grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-12 gap-y-8">
+
+          {/* div-1 */}
+          <div className="flex flex-col items-center ">
+          <div className="border-2 border-black p-4 md:p-8 rounded-full"><PiLeaf className="w-8 h-8 md:w-12 md:h-12"/></div>
+          <h3 className="mt-8 text-2xl font-semibold">High-Quality Materials</h3>
+          <p className="text-sm text-gray-600 mt-2">Crafted with precision and excellence, our activewear is meticulously engineered using premium materials to ensure unmatched comfort and durability.</p>
+          </div>
+
+           {/* div-1 */}
+          <div className=" flex-col items-center hidden md:flex">
+          <div className="border-2 border-black p-8 rounded-full"><MdOutlineDiamond  className="w-12 h-12" /></div>
+          <h3 className="mt-8 text-2xl font-semibold">Laconic Design</h3>
+          <p className="text-sm text-gray-600 mt-2">Simplicity refined. Our activewear embodies the essence of minimalistic design, delivering effortless style that speaks volumes.</p>
+          </div>
+
+          {/* div-1 */}
+          <div className="flex-col items-center hidden md:flex">
+          <div className="border-2 border-black p-8 rounded-full"><PiTriangleBold className="w-12 h-12" /></div>
+          <h3 className="mt-8 text-2xl font-semibold">Various Sizes</h3>
+          <p className="text-sm text-gray-600 mt-2">Designed for every body and anyone, our activewear embraces diversity with a wide range of sizes and shapes, celebrating the beauty of individuality.</p>
+          </div>
         </div>
 
       </div>
