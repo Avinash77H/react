@@ -2,13 +2,13 @@ import React from "react";
 import aboutHero from "../assets/about1.jpg";
 import about2 from "../assets/about2.jpg";
 import about3 from "../assets/about3.jpg";
+import about4 from "../assets/about4.jpg";
 import aboutSlider1 from "../assets/aboutSlider1.jpg";
 import aboutSlider2 from "../assets/aboutSlider2.jpg";
 
 function AboutUs() {
   return (
     <div className="mt-4 ">
-      
       {/* hero section */}
       <div
         className="bg-cover bg-center py-96"
@@ -33,14 +33,14 @@ function AboutUs() {
         </div>
       </div>
 
-      <div className=" flex mx-8 mt-24 ">
+      <div className=" flex mx-8 mt-24 flex-col md:flex-row md:gap-8 justify-center ">
         <div
-          className="w-1/2 lg:py-52 xl:py-80 bg-cover bg-no-repeat bg-center"
+          className="w-full  bg-cover bg-no-repeat bg-center aspect-square "
           style={{ backgroundImage: `url(${about2})` }}
         ></div>
-        <div className="w-1/2 flex flex-col justify-center items-start  gap-4 py-12 px-20">
-          <h5 className="text-3xl">Established - 1995</h5>
-          <p className="text-gray-500 text-sm">
+        <div className="w-full flex flex-col justify-center items-start  gap-4 py-12 ">
+          <h5 className="text-3xl ">Established - 1995</h5>
+          <p className="text-gray-500 text-sm xl:text-lg">
             Ecomus was founded in 1995 by Jane Smith, a fashion lover with a
             passion for timeless style. Jane had always been drawn to classic
             pieces that could be worn season after season, and she believed that
@@ -51,6 +51,30 @@ function AboutUs() {
         </div>
       </div>
 
+      <div className=" flex mx-8 mt-24 flex-col-reverse md:flex-row-reverse md:gap-8 justify-center border-2 border-green-500">
+        <div
+          className="w-3/4 md:w-[40%]   bg-cover bg-no-repeat bg-center aspect-square relative"
+          style={{ backgroundImage: `url(${about3})` }}
+        >
+          <img
+            src={about4}
+            alt=""
+            className="w-1/2 absolute -bottom-8  -right-20 aspect-auto"
+          />
+        </div>
+
+        <div className="w-full md:w-[40%] flex flex-col justify-center items-center md:items-start  gap-4 py-12">
+          <h5 className="text-3xl ">Our mission</h5>
+          <p className="text-gray-500 text-sm xl:text-lg">
+            Our mission is to empower people through sustainable fashion. We
+            want everyone to look and feel good, while also doing our part to
+            help the environment.We believe that fashion should be stylish,
+            affordable and accessible to everyone. Body positivity and
+            inclusivity are values that are at the heart of our brand.
+          </p>
+        </div>
+
+      </div>
     </div>
   );
 }
