@@ -9,6 +9,8 @@ import { PiLeaf } from "react-icons/pi";
 import { MdOutlineDiamond } from "react-icons/md";
 import { PiTriangleBold } from "react-icons/pi";
 
+import CustomerReviewSlider from "../components/CustomerReviewSlider";
+
 function AboutUs() {
   return (
     <div className="mt-4 ">
@@ -79,8 +81,10 @@ function AboutUs() {
       </div>
 
       {/* priority  */}
-      <div className="text-center border-2 border-green-500 mt-32 bg-orange-100  p-8 md:p-20">
-        <h2 className="text-2xl lg:text-4xl font-semibold">Quality is our priority</h2>
+      <div className="text-center border-2 border-green-500 mt-32 mx-8 bg-orange-100  p-8 md:p-20">
+        <h2 className="text-2xl lg:text-5xl font-semibold">
+          Quality is our priority
+        </h2>
         <p className="text-sm xl:text-xl mt-8">
           Our talented stylists have put together outfits that are perfect for
           the season. They've variety of ways to inspire your next
@@ -88,30 +92,55 @@ function AboutUs() {
         </p>
 
         <div className="text-center grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-12 gap-y-8">
-
           {/* div-1 */}
           <div className="flex flex-col items-center ">
-          <div className="border-2 border-black p-4 md:p-8 rounded-full"><PiLeaf className="w-8 h-8 md:w-12 md:h-12"/></div>
-          <h3 className="mt-8 text-2xl font-semibold">High-Quality Materials</h3>
-          <p className="text-sm text-gray-600 mt-2">Crafted with precision and excellence, our activewear is meticulously engineered using premium materials to ensure unmatched comfort and durability.</p>
+            <div className="border-2 border-black p-4 md:p-8 rounded-full">
+              <PiLeaf className="w-8 h-8 md:w-12 md:h-12" />
+            </div>
+            <h3 className="mt-8 text-2xl font-semibold">
+              High-Quality Materials
+            </h3>
+            <p className="text-sm text-gray-600 mt-2">
+              Crafted with precision and excellence, our activewear is
+              meticulously engineered using premium materials to ensure
+              unmatched comfort and durability.
+            </p>
           </div>
 
-           {/* div-1 */}
+          {/* div-1 */}
           <div className=" flex-col items-center hidden md:flex">
-          <div className="border-2 border-black p-8 rounded-full"><MdOutlineDiamond  className="w-12 h-12" /></div>
-          <h3 className="mt-8 text-2xl font-semibold">Laconic Design</h3>
-          <p className="text-sm text-gray-600 mt-2">Simplicity refined. Our activewear embodies the essence of minimalistic design, delivering effortless style that speaks volumes.</p>
+            <div className="border-2 border-black p-4 md:p-8 rounded-full">
+              <MdOutlineDiamond className="w-12 h-12" />
+            </div>
+            <h3 className="mt-8 text-2xl font-semibold">Laconic Design</h3>
+            <p className="text-sm text-gray-600 mt-2">
+              Simplicity refined. Our activewear embodies the essence of
+              minimalistic design, delivering effortless style that speaks
+              volumes.
+            </p>
           </div>
 
           {/* div-1 */}
           <div className="flex-col items-center hidden md:flex">
-          <div className="border-2 border-black p-8 rounded-full"><PiTriangleBold className="w-12 h-12" /></div>
-          <h3 className="mt-8 text-2xl font-semibold">Various Sizes</h3>
-          <p className="text-sm text-gray-600 mt-2">Designed for every body and anyone, our activewear embraces diversity with a wide range of sizes and shapes, celebrating the beauty of individuality.</p>
+            <div className="border-2 border-black p-4 md:p-8 rounded-full">
+              <PiTriangleBold className="w-12 h-12" />
+            </div>
+            <h3 className="mt-8 text-2xl font-semibold">Various Sizes</h3>
+            <p className="text-sm text-gray-600 mt-2">
+              Designed for every body and anyone, our activewear embraces
+              diversity with a wide range of sizes and shapes, celebrating the
+              beauty of individuality.
+            </p>
           </div>
         </div>
-
       </div>
+
+      {/* customer's review slider section */}
+
+        <CustomerReviewSlider/>
+      
+
+      
     </div>
   );
 }
