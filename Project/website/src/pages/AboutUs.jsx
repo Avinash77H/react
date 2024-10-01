@@ -3,13 +3,12 @@ import aboutHero from "../assets/about1.jpg";
 import about2 from "../assets/about2.jpg";
 import about3 from "../assets/about3.jpg";
 import about4 from "../assets/about4.jpg";
-import aboutSlider1 from "../assets/aboutSlider1.jpg";
-import aboutSlider2 from "../assets/aboutSlider2.jpg";
 import { PiLeaf } from "react-icons/pi";
 import { MdOutlineDiamond } from "react-icons/md";
 import { PiTriangleBold } from "react-icons/pi";
-
 import CustomerReviewSlider from "../components/CustomerReviewSlider";
+import ShopGram from "../components/ShopGram";
+import Footer from "../components/Footer";
 
 function AboutUs() {
   return (
@@ -81,7 +80,7 @@ function AboutUs() {
       </div>
 
       {/* priority  */}
-      <div className="text-center border-2 border-green-500 mt-32 mx-8 bg-orange-100  p-8 md:p-20">
+      <div className="text-center mt-32 mx-8 bg-orange-100  p-8 md:p-20">
         <h2 className="text-2xl lg:text-5xl font-semibold">
           Quality is our priority
         </h2>
@@ -107,7 +106,7 @@ function AboutUs() {
             </p>
           </div>
 
-          {/* div-1 */}
+          {/* div-2 */}
           <div className=" flex-col items-center hidden md:flex">
             <div className="border-2 border-black p-4 md:p-8 rounded-full">
               <MdOutlineDiamond className="w-12 h-12" />
@@ -120,7 +119,7 @@ function AboutUs() {
             </p>
           </div>
 
-          {/* div-1 */}
+          {/* div-3 */}
           <div className="flex-col items-center hidden md:flex">
             <div className="border-2 border-black p-4 md:p-8 rounded-full">
               <PiTriangleBold className="w-12 h-12" />
@@ -135,12 +134,10 @@ function AboutUs() {
         </div>
       </div>
 
-      {/* customer's review slider section */}
+      <CustomerReviewSlider />
 
-        <CustomerReviewSlider/>
-      
-
-      
+      <ShopGram />
+      <Footer />
     </div>
   );
 }

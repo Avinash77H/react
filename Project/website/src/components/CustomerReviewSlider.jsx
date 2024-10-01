@@ -96,13 +96,13 @@ function CustomerReviewSlider() {
     setNav2(sliderRef2);
   }, []);
   return (
-    <div className="slider-container grid grid-cols-1 md:grid-cols-2  items-center gap-x-8 mt-32 border-2 border-purple-500 mx-8">
+    <div className="slider-container grid grid-cols-1 md:grid-cols-2  items-center gap-x-8 mt-32  mx-8">
         {/* first slider */}
         <div className="w-full">
         <Slider asNavFor={nav2} ref={(slider) => (sliderRef1 = slider)}>
 
         <div className="first-slide w-full">
-          <div className=" border-2 border-red-500 w-full">  
+          <div className=" w-full">  
             <div className="">
               <h3 className="text-2xl lg:text-3xl font-semibold">
                 Our customer’s reviews
@@ -124,21 +124,19 @@ function CustomerReviewSlider() {
                 team is friendly and helpful. I highly recommend this site to
                 anyone looking for affordable clothing."
               </p>
-              <p className="mt-4 font-bold">Robert smith</p>
-              <div className=" mt-4">
-                <span className="rounded-full">
-                  <CiCircleChevLeft className="w-8 h-8 inline" />
-                </span>
-                <span className="rounded-full">
-                  <CiCircleChevRight className="w-8 h-8 inline" />
-                </span>
+
+              <p className="mt-4 font-bold hidden md:block">Robert smith</p>
+              <div className=" inline-flex mt-4 md:hidden">
+              <img src={aboutSlider1} alt="" className="w-20 h-20 "/>
+              <p className="mt-4 font-bold ">Robert smith</p>
               </div>
+            
             </div>
           </div>
         </div>
 
         <div className="second-slide ">
-        <div className=" border-2 border-red-500 w-full">  
+        <div className=" w-full">  
             <div className="">
               <h3 className="text-2xl lg:text-3xl font-semibold">
                 Our customer’s reviews
@@ -160,15 +158,13 @@ function CustomerReviewSlider() {
                 team is friendly and helpful. I highly recommend this site to
                 anyone looking for affordable clothing."
               </p>
-              <p className="mt-4 font-bold">Robert smith</p>
-              <div className=" mt-4">
-                <span className="rounded-full">
-                  <CiCircleChevLeft className="w-8 h-8 inline" />
-                </span>
-                <span className="rounded-full">
-                  <CiCircleChevRight className="w-8 h-8 inline" />
-                </span>
+
+              <p className="mt-4 font-bold hidden md:block">Jenifer Unix</p>
+              <div className=" inline-flex mt-4 md:hidden">
+              <img src={aboutSlider2} alt="" className="w-20 h-20 "/>
+              <p className="mt-4 font-bold">Jenifer Unix</p>
               </div>
+              
             </div>
           </div>
         </div>
@@ -185,8 +181,8 @@ function CustomerReviewSlider() {
         swipeToSlide={true}
         focusOnSelect={true}
       >
-        <div className="border-2 border-blue-500">
-          <div className="w-full">
+        <div className="">
+          <div className="w-full ">
             <img src={aboutSlider1} alt="" className="w-full"/>
           </div>
         </div>
@@ -198,100 +194,18 @@ function CustomerReviewSlider() {
         </div>
 
       </Slider>
+      
         </div>
 
-      {/* <Slider asNavFor={nav2} ref={(slider) => (sliderRef1 = slider)}>
-        <div className="first-slide ">
-          <div className=" border-2 border-red-500 flex ">
-            <div className="w-1/2">
-              <h3 className="text-2xl lg:text-3xl font-semibold">
-                Our customer’s reviews
-              </h3>
-              <div>
-                <img src={quote} alt="quote-image" />
-              </div>
-              <div className="flex gap-2">
-                <IoStar className="text-orange-500 w-6 h-6" />
-                <IoStar className="text-orange-500 w-6 h-6" />
-                <IoStar className="text-orange-500 w-6 h-6" />
-                <IoStar className="text-orange-500 w-6 h-6" />
-                <IoStar className="text-orange-500 w-6 h-6" />
-              </div>
-              <p>
-                "I have been shopping with this web fashion site for over a year
-                now and I can confidently say it is the best online fashion site
-                out there.The shipping is always fast and the customer service
-                team is friendly and helpful. I highly recommend this site to
-                anyone looking for affordable clothing."
-              </p>
-              <p>Robert smith</p>
-              <div className=" mt-4  ">
-                <span className="rounded-full ">
+     
+        <div className=" mt-4">
+                <span className="rounded-full">
                   <CiCircleChevLeft className="w-8 h-8 inline" />
                 </span>
-                <span className="rounded-full ">
+                <span className="rounded-full">
                   <CiCircleChevRight className="w-8 h-8 inline" />
                 </span>
               </div>
-            </div>
-          </div>
-        </div>
-        <div className="second-slide ">
-          <div className=" border-2 border-red-500 flex ">
-            <div className="w-1/2">
-              <h3 className="text-2xl lg:text-3xl font-semibold">
-                Our customer’s reviews
-              </h3>
-              <div>
-                <img src={quote} alt="quote-image" />
-              </div>
-              <div className="flex gap-2">
-                <IoStar className="text-orange-500 w-6 h-6" />
-                <IoStar className="text-orange-500 w-6 h-6" />
-                <IoStar className="text-orange-500 w-6 h-6" />
-                <IoStar className="text-orange-500 w-6 h-6" />
-                <IoStar className="text-orange-500 w-6 h-6" />
-              </div>
-              <p>
-                "I have been shopping with this web fashion site for over a year
-                now and I can confidently say it is the best online fashion site
-                out there.The shipping is always fast and the customer service
-                team is friendly and helpful. I highly recommend this site to
-                anyone looking for affordable clothing."
-              </p>
-              <p>Robert smith</p>
-              <div className=" mt-4  ">
-                <span className="rounded-full ">
-                  <CiCircleChevLeft className="w-8 h-8 inline" />
-                </span>
-                <span className="rounded-full ">
-                  <CiCircleChevRight className="w-8 h-8 inline" />
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Slider> */}
-
-      {/* <Slider
-        asNavFor={nav1}
-        ref={(slider) => (sliderRef2 = slider)}
-        slidesToShow={1}
-        swipeToSlide={true}
-        focusOnSelect={true}
-      >
-        <div>
-          <div className="w-1/2">
-            <img src={aboutSlider1} alt="" />
-          </div>
-        </div>
-
-        <div>
-        <div className="w-1/2">
-            <img src={aboutSlider2} alt="" />
-          </div>
-        </div>
-      </Slider> */}
     </div>
   );
 }

@@ -85,7 +85,7 @@ function Categories() {
               })}
             </Slider>
           </div>
-          <div className="xl:w-1/4 xl:aspect-square border-2 place-self-stretch border-black rounded-xl  xl:px-8 xl:pt-8 xl:mt-16 flex  items-center justify-between xl:flex-col xl:items-start">
+          <div className="xl:w-1/4 xl:aspect-square border-2 place-self-stretch border-black rounded-xl p-2 xl:px-8 xl:pt-8 xl:mt-16 flex  items-center justify-between xl:flex-col xl:items-start">
             <p className="text-lg text-wrap xl:text-4xl font-normal xl:pt-40">
               Discovery all new items
             </p>
