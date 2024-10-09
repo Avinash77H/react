@@ -32,7 +32,7 @@ function Form() {
             <input type="password" name="password" className='border border-gray-400 pl-2 py-1'/>
         </div>
         
-        <button type='submit' className='text-white bg-purple-400 py-2'>Submit</button>
+        <button type='submit ' className='text-white bg-purple-400 py-2'>Submit</button>
 
       </form>
     </div>
