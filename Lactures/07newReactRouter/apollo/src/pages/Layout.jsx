@@ -21,7 +21,6 @@ function Layout(){
                         <Route path='/contact' element={<Contact/>}/>
                         <Route path='/shop' element={<Shop/>}/>
                         <Route path='*' element={<Error/>}/>
-                       
                     </Route>
                 </Routes>
             </BrowserRouter>
