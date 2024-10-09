@@ -18,7 +18,7 @@ function Form() {
                 (e)=>{
                  info =  {...info,firstName:e.target.value}
                     console.log(info)
-                }
+                } 
                 } type="text" name='firstName' className='border border-gray-400 pl-2 py-1'/>
         </div>
 
