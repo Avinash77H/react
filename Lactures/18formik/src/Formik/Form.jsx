@@ -54,7 +54,7 @@ function Form() {
             className="border border-gray-400 pl-2 py-1"
           />
           {/* {formik.errors.firstName && formik.touched.firstName ?<p>{formik.errors.firstName}</p>:null} */}
-          {/* {formik.errors.firstName?<div>{formik.errors.firstName}</div>:null} */}
+          {formik.errors.firstName?<div>{formik.errors.firstName}</div>:null}
         </div>
 
         <div>
@@ -69,7 +69,7 @@ function Form() {
             className="border border-gray-400 pl-2 py-1"
           />
           {/* {formik.errors.email && formik.touched.email ?<p>{formik.errors.email}</p>:null} */}
-           {/* {formik.errors.email?<div>{formik.errors.email}</div>:null} */}
+           {formik.errors.email?<div>{formik.errors.email}</div>:null}
         </div>
 
         <div>
@@ -84,7 +84,7 @@ function Form() {
             className="border border-gray-400 pl-2 py-1"
           />
           {/* {formik.errors.password && formik.touched.password ?<p>{formik.errors.password}</p>:null} */}
-           {/* {formik.errors.password?<div>{formik.errors.password}</div>:null} */}
+           {formik.errors.password?<div>{formik.errors.password}</div>:null}
         </div>
 
         <button  type="submit " className="text-white bg-purple-400 py-2">
