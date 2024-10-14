@@ -12,7 +12,7 @@ import "./App.css"
 function App() {
   const[isLoggedIn,setIsLoggedIn]= useState(false)
   return (
-    <div className="">
+    <div className="w-screen h-screen ">
        <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn}/>
 
        <Routes>

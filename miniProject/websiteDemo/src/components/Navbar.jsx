@@ -7,13 +7,13 @@ function Navbar(props) {
   let isLoggedIn = props.isLoggedIn;
   let setIsLoggedIn = props.setIsLoggedIn;
   return (
-    <div className="flex items-center justify-evenly">
+    <div className="flex items-center justify-evenly border border-green-300 bg-green-100">
       <Link to="/">
-        <img src={logo} alt="" className="size-20" />
+        <img src={logo} alt="" className="size-20 " />
       </Link>
 
       <nav>
-        <ul className="flex gap-4 ">
+        <ul className="flex gap-4 text-green-700">
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -26,16 +26,16 @@ function Navbar(props) {
         </ul>
       </nav>
 
-      <div className="flex ml-5 mr-3 gap-4">
+      <div className="flex ml-5 mr-3 gap-4 text-green-700">
         {!isLoggedIn && (
           <Link to="/login">
-            <button>Login</button>
+            <button className="bg-blue-200 px-2 py-1 rounded-md">Login</button>
           </Link>
         )}
 
         {!isLoggedIn && (
           <Link to="/signup">
-            <button>Sign Up</button>
+            <button className="bg-blue-200 px-2 py-1 rounded-md">Sign Up</button>
           </Link>
         )}
 
@@ -44,12 +44,12 @@ function Navbar(props) {
             <button onClick={()=>{
               setIsLoggedIn(false)
               toast.success('Logged Out')
-            }}>Log out</button>
+            }} className="bg-blue-200 px-2 py-1 rounded-md">Log out</button>
           </Link>
         )}
 
         {isLoggedIn && (
-          <Link to="/dashboard">
+          <Link to="/dashboard" className="bg-blue-200 px-2 py-1 rounded-md">
             <button>Dashboard</button>
           </Link>
         )}

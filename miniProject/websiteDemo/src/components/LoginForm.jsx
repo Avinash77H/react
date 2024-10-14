@@ -28,7 +28,7 @@ function LoginForm({setIsLoggedIn}) {
     navigate("/dashboard")
   }
   return (
-    <form onSubmit={submitHandler}>
+    <form onSubmit={submitHandler} className=" flex flex-col gap-4">
       <label>
         <p>
           Email Address<sup>*</sup>
@@ -40,30 +40,36 @@ function LoginForm({setIsLoggedIn}) {
           value={formData.email}
           onChange={changeHandler}
           placeholder="Enter email id"
+          className="border border-gray-700 px-2 mt-1"
         />
       </label>
 
-      <label>
+      <label className="">
         <p>
-          Password<sub>*</sub>
+          Password<sup>*</sup>
         </p>
-        <input
+ 
+       <div className="relative inline">
+       <input
           type={showPassword?("text"):("password")}
           name="password"
           required
           value={formData.password}
           onChange={changeHandler}
           placeholder="Enter password"
+          className="border border-gray-700 px-2 mt-1"
         />
 
-        <span onClick={()=>setShowPassword((prev)=>!prev)}>{showPassword?<AiOutlineEyeInvisible/>:<AiOutlineEye/>}</span>
+        <span onClick={()=>setShowPassword((prev)=>!prev)} className="absolute right-4 pt-2">{showPassword?<AiOutlineEyeInvisible/>:<AiOutlineEye/>}</span>
+       </div>
+      
 
         <Link to="#">
-        <p>Forgot Password</p>
+        <p className="text-[12px] text-blue-700 ml-28">Forgot Password</p>
         </Link>
       </label>
 
-      <button >Sign In</button>
+      <button className="place-self-start bg-yellow-300 text-black font-semibold px-2 py-1 ml-2">Sign In</button>
     </form>
   );
 }

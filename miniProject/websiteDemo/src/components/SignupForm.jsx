@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 function SignupForm({setIsLoggedIn}) {
   let [showPassword, setShowPassword] = useState(false);
+  let [confirmShowPassword,setConfirmShowPassword] = useState(false)
   let navigate = useNavigate();
   let [formData, setFormData] = useState({
     firstName: "",
@@ -39,15 +40,12 @@ function SignupForm({setIsLoggedIn}) {
 
   return (
     <div>
-      <div>
-        <button>Student</button>
-        <button>Instructor</button>
-      </div>
+      
 
-      <form onSubmit={submitHandler}>
+      <form onSubmit={submitHandler} className=" flex flex-col gap-2 ">
         {/* first name and last name */}
-        <div>
-          <label>
+        <div className="flex flex-col gap-2">
+          <label cla>
             <p>
               firstName<sup>*</sup>
             </p>
@@ -57,6 +55,7 @@ function SignupForm({setIsLoggedIn}) {
               value={formData.firstName}
               onChange={changeHandler}
               placeholder="Enter first name"
+              className="border border-gray-700 px-2 mt-1"
             />
           </label>
 
@@ -70,6 +69,7 @@ function SignupForm({setIsLoggedIn}) {
               value={formData.lastName}
               onChange={changeHandler}
               placeholder="Enter last name"
+              className="border border-gray-700 px-2 mt-1"
             />
           </label>
         </div>
@@ -85,15 +85,17 @@ function SignupForm({setIsLoggedIn}) {
             value={formData.email}
             onChange={changeHandler}
             placeholder="Enter Email"
+            className="border border-gray-700 px-2 mt-1"
           />
         </label>
 
         {/* password */}
-        <div>
+        <div className="flex flex-col gap-2">
           <label>
             <p>
               Create Password<sup>*</sup>
             </p>
+            <div className="relative inline">
             <input
               required
               type={showPassword ? "text" : "password"}
@@ -101,33 +103,38 @@ function SignupForm({setIsLoggedIn}) {
               value={formData.password}
               onChange={changeHandler}
               placeholder="Password"
+              className="border border-gray-700 px-2 mt-1"
             />
 
-            <span onClick={() => setShowPassword((prev) => !prev)}>
+            <span onClick={() => setShowPassword((prev) => !prev)} className="absolute top-1 right-1">
               {showPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
             </span>
+            </div>
           </label>
 
-          <label>
+          <label >
             <p>
               Confirm Password<sup>*</sup>
             </p>
-            <input
+           <div className="relative inline">
+           <input
               required
-              type={showPassword ? "text" : "password"}
+              type={confirmShowPassword ? "text" : "password"}
               name="confirmPassword"
               value={formData.confirmPassword}
               onChange={changeHandler}
               placeholder="Confirm Password"
+              className="border border-gray-700 px-2 mt-1"
             />
 
-            <span onClick={() => setShowPassword((prev) => !prev)}>
-              {showPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
+            <span onClick={() => setConfirmShowPassword((prev) => !prev)} className="absolute top-1 right-1">
+              {confirmShowPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
             </span>
+           </div>
           </label>
         </div>
 
-        <button >Create Account</button>
+        <button className="place-self-start bg-yellow-300 text-black font-semibold px-2 py-1 ml-2 mt-2">Create Account</button>
       </form>
     </div>
   );

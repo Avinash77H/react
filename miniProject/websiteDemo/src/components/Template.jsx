@@ -4,23 +4,23 @@ import SignupForm from "./SignupForm";
 
 function Template({ title, desc1, desc2, image, formtype, setIsLoggedIn }) {
   return (
-    <div>
-      <div>
-        <h1>{title}</h1>
-        <p>
+    <div className="flex justify-between px-20 mt-20 items-center ">
+      <div className="flex flex-col gap-4 ">
+        <h1 className="text-xl font-bold text-yellow-500">{title}</h1>
+        <p className="flex flex-col">
           <span>{desc1}</span>
-          <span>{desc2}</span>
+          <span className="text-blue-700">{desc2}</span>
         </p>
 
         {formtype === "signup" ? <SignupForm setIsLoggedIn={setIsLoggedIn}/> : <LoginForm setIsLoggedIn={setIsLoggedIn}/>}
 
-        <div>
-          <div></div>
-          <p>Or</p>
-          <div></div>
+        <div className="flex w-full items-center gap-2 pr-20">
+          <div className="border-t border-t-black w-1/2"></div>
+          <p className="text-lg">OR</p>
+          <div className="border-t border-t-black w-1/2"></div>
         </div>
 
-        <button>
+        <button className="place-self-start bg-yellow-300 text-black font-semibold px-2 py-1 ml-2">
           <p>Sign in With Google</p>
         </button>
       </div>
