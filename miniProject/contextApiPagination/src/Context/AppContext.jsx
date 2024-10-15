@@ -14,15 +14,10 @@ export default function AppContextProvider({children}){
 
   async function fetchBlogPosts(page = 1) {
     setLoading(true);
-    console.log('page is:',page)
-    let url = `${baseUrl}?pages=${page}`
-    
-    console.log('inside fetchBlogPosts')
-    console.log(url)
+    let url = `${baseUrl}?page=${page}`
     try {
       const result = await fetch(url);
       const data = await result.json();
-      console.log(data);
       setPage(data.page)
       setPosts(data.posts);
       setTotalPages(data.totalPages)
@@ -38,7 +33,6 @@ export default function AppContextProvider({children}){
   function handlePageChange(page){
     setPage(page);
     fetchBlogPosts(page)
-    console.log('handlepagechange function called','page is:',page)
   }
 
   const value = {
