@@ -10,9 +10,8 @@ function Form3() {
     password: "",
   };
 
-  const onSubmit= (values,event) => {
-    // event.preventDefault()
-    // console.log(initialValues)
+  const onSubmit= (values) => {
+    
     console.log(values);
   };
 
