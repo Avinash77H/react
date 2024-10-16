@@ -6,7 +6,9 @@ function Login() {
   return (
     <div>
       <h1 className='xyz'>This is login page</h1>
+
       <button onClick={()=>loginWithRedirect()}>Log In</button>
+      
     </div>
   )
 }

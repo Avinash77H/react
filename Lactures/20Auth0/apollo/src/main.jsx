@@ -5,7 +5,7 @@ import "./index.css";
 import { Auth0Provider } from "@auth0/auth0-react";
 
 createRoot(document.getElementById("root")).render(
-  <Auth0Provider domain="dev-u26qpla02lieo88t.us.auth0.com" clientId="zNFsw20vYNDkoRUkEUKRNQ3FaeuKECMc"  authorizationParams={{
+  <Auth0Provider domain="dev-s8jztod54bqikx4t.us.auth0.com" clientId="2JnMe853vgUoUbZBUgez1vIjoyiAYjxj"  authorizationParams={{
     redirect_uri: window.location.origin
   }}>
     <App />
