@@ -9,8 +9,9 @@ function Form() {
     password:""
   }
 
-  const onSubmit = (values)=>{
+  const onSubmit = (values,{resetForm})=>{
     console.log(values)
+    resetForm()
   }
 
   const validate = (values)=>{

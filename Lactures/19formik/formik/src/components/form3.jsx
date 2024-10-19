@@ -10,9 +10,10 @@ function Form3() {
     password: "",
   };
 
-  const onSubmit= (values) => {
+  const onSubmit= (values,{resetForm}) => {
     
     console.log(values);
+    resetForm()
   };
 
   let userSchema = Yup.object({

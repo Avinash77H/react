@@ -10,8 +10,9 @@ function Signup() {
     password:""
   }
 
-  const submitHandler = (values)=>{
+  const submitHandler = (values,{resetForm})=>{
     console.log(values)
+    resetForm()
     useNavigate('/')
   }
 
@@ -51,7 +52,7 @@ function Signup() {
           </div>
         </div>
 
-        <button className='btn place-self-center'>Sign up</button>
+        <button type='submit' className='btn place-self-center'>Sign up</button>
        </Form>
       </Formik>
       </div>

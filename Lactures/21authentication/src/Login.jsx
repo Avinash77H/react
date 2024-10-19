@@ -8,8 +8,9 @@ function Login() {
     email: "",
     password: "",
   };
-  const submitHandler = (values) => {
+  const submitHandler = (values,{resetForm}) => {
     console.log(values)
+    resetForm()
     useNavigate("/");
   };
   const validatationScheme = Yup.object().shape({

@@ -9,9 +9,10 @@ function Form() {
     password: "",
   };
 
-  let onSubmit = (values) =>{
+  let onSubmit = (values,{reset}) =>{
     console.log(values)
     console.log('hello')
+    resetForm()
   }
 
   // let validate = (values) =>{
