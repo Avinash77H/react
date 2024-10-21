@@ -2,16 +2,28 @@ import React from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
+import { getFormDataFromLocalStorage } from "./auth/auth";
 
 function Login() {
+  const navigate = useNavigate()
   const initialValues = {
     email: "",
     password: "",
   };
-  const submitHandler = (values,{resetForm}) => {
+  const submitHandler = (values,{resetForm,isSubmitting, isError}) => {
     console.log(values)
-    resetForm()
-    useNavigate("/");
+    
+    const user = getFormDataFromLocalStorage(values.email);
+    if(user && values.password === user.password){
+      localStorage.setItem('authenticate',true);
+      resetForm() 
+      navigate("/")
+    }
+    else{
+      isError('invalid email or password')
+    }
+    isSubmitting(false)
+    
   };
   const validatationScheme = Yup.object().shape({
     email: Yup.string().email("Invalid Email").required("Email is required"),

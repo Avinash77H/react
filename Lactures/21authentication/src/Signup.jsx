@@ -2,6 +2,7 @@ import React from 'react'
 import {Formik,Form,Field,ErrorMessage }from "formik"
 import * as Yup from 'yup'
 import { useNavigate } from 'react-router-dom'
+import { setFormDataFromLocalStorage } from './auth/auth'
 
 function Signup() {
   const initialValues = {
@@ -12,6 +13,7 @@ function Signup() {
 
   const submitHandler = (values,{resetForm})=>{
     console.log(values)
+    setFormDataFromLocalStorage(values)
     resetForm()
     useNavigate('/')
   }
