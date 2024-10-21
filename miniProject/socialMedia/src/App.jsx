@@ -8,7 +8,7 @@ import CreatePost from './components/CreatePost'
 function App() {
 
   return (
-    <div  className='app-container'>
+    <div className='app-container'>
 
       <Sidebar/>
      <div className='content'>
