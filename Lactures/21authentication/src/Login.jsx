@@ -22,7 +22,7 @@ function Login() {
     else{
       isError('invalid email or password')
     }
-    isSubmitting(false)
+    // isSubmitting(false)
     
   };
   const validatationScheme = Yup.object().shape({
