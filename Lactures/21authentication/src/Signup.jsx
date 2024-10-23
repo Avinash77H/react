@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import { setFormDataFromLocalStorage } from './auth/auth'
 
 function Signup() {
+  const navigate = useNavigate()
   const initialValues = {
     username:"",
     email:"",
@@ -15,7 +16,7 @@ function Signup() {
     console.log(values)
     setFormDataFromLocalStorage(values)
     resetForm()
-    useNavigate('/')
+    navigate('/')
   }
 
   const validatationScheme = Yup.object().shape({
