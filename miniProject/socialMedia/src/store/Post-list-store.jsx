@@ -16,7 +16,13 @@ const postListReducer = (currPostList, action) => {
 };
 
 function PostListProvider({ children }) {
-  const addPost = () => {};
+
+  const [postList, dispatchPostList] = useReducer(postListReducer, DEFAULT_POST_LIST);
+
+  const addPost = (userId,postTitle,postBody,reactions,tags) => {
+    console.log(`${userId} ${postTitle} ${postBody} ${reactions} ${tags}`)
+  };
+
   const deletePost = (postID) => {
     dispatchPostList({
       type:'DELETE_POST',
@@ -26,7 +32,6 @@ function PostListProvider({ children }) {
     })
   };
 
-  const [postList, dispatchPostList] = useReducer(postListReducer, DEFAULT_POST_LIST);
 
   return (
     <PostList.Provider
