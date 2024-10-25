@@ -21,6 +21,7 @@ function Post({post}) {
     This post has been reacted by {post.reactions.likes || 0}
 </div>
   </div>
+  
 </div>
   )
 }
