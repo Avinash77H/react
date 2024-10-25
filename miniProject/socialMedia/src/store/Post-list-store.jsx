@@ -9,6 +9,7 @@ export const PostList = createContext({
 });
 
 const postListReducer = (currPostList, action) => {
+  
   let newPostList = currPostList;
   if (action.type === "DELETE_POST") {
     newPostList = currPostList.filter(
@@ -24,7 +25,7 @@ const postListReducer = (currPostList, action) => {
 
 function PostListProvider({ children }) {
   const [postList, dispatchPostList] = useReducer(postListReducer, []);
-
+  
   const addPost = (userId, postTitle, postBody, reactions, tags) => {
     dispatchPostList({
       type: "ADD_POST",

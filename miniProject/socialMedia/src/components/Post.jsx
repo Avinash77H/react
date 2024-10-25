@@ -5,7 +5,7 @@ import {PostList } from '../store/Post-list-store';
 function Post({post}) {
   const {deletePost} = useContext(PostList)
   return (
-    <div className="card post-card" style={{width: "25rem"}}>
+    <div className="card post-card " style={{width: "25rem"}}>
   
   <div className="card-body">
     <h5 className="card-title">{post.title}
@@ -18,7 +18,7 @@ function Post({post}) {
       <span key={index} className="badge text-bg-primary hastag">{tag}</span>
     ))}
     <div className="alert alert-success reactions" role="alert">
-    This post has been reacted by {post.reactions || 0}
+    This post has been reacted by {post.reactions.likes || 0}
 </div>
   </div>
 </div>

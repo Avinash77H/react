@@ -13,7 +13,7 @@ function PostList() {
       addInitialPosts(data.posts)
     })
   }
-  console.log(postList)
+
   return (
     <div className=''>
       {postList.length === 0 &&<Welcome onGetPostsClick={onGetPostsClick}/>}
