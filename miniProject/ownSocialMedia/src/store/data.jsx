@@ -1,11 +1,17 @@
-import { createContext } from "react";
 import React from 'react'
+import { createContext } from 'react';
 
-export const ownContext = createContext()
+export const ownContext = createContext();
 
 function DataProvider({children}) {
+
+  const person = {
+    name : 'vidit',
+    age : 17
+  }
+
   return (
-    <ownContext.Provider>
+    <ownContext.Provider value={person}>
       {children}
     </ownContext.Provider>
   )

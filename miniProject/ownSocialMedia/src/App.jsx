@@ -1,7 +1,6 @@
-
 import './App.css'
+import CreatePost from './components/CreatePost'
 import Navbar from './components/Navbar'
-
 import Sidebar from './components/Sidebar'
 
 function App() {
@@ -12,9 +11,6 @@ function App() {
         <Sidebar/>
         <Navbar/>
       </div>
-     
-     
-     
     </div>
   )
 }

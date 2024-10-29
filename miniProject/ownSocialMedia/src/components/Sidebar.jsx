@@ -1,6 +1,5 @@
 import React from 'react'
-
-import Posts from './Posts'
+import {NavLink} from "react-router-dom"
 
 
 function Sidebar() {
