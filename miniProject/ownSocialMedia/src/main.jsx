@@ -5,9 +5,10 @@ import App from "./App.jsx";
 import DataProvider from "./store/data.jsx";
 
 createRoot(document.getElementById("root")).render(
-  <DataProvider>
+  
     <StrictMode>
-      <App />
+      <DataProvider>
+        <App />
+      </DataProvider>
     </StrictMode>
-  </DataProvider>
 );

@@ -39,7 +39,7 @@ function PostListProvider({ children }) {
       },
     });
   };
-
+  
   const addInitialPosts = (posts)=>{
     dispatchPostList({
       type : 'ADD_INITIAl_POSTS',
