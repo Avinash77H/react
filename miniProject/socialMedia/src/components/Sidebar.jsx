@@ -1,25 +1,26 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-function Sidebar({selectedTag,setSelectedTag}) {
+function Sidebar() {
   return (
     <div className="d-flex flex-column flex-shrink-0 p-3 bg-dark text-white sidebar" style={{width: "180px"}}>
-    <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+    <a  href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
       <svg className="bi pe-none me-2" width="40" height="32"><use xlinkHref="#bootstrap"></use></svg>
       <span className="fs-4 text-white">Sidebar</span>
-    </a>
+    </a >
     <hr></hr>
     <ul className="nav nav-pills flex-column mb-auto text-white mt-3" >
       <li className="nav-item">
-        <a href="#" onClick={()=>setSelectedTag('Home')} className={`${selectedTag === 'Home' && 'active'} nav-link text-white`} aria-current="page">
+        <Link  to="/" onClick={()=>console.log('home click')} className='nav-link text-white'aria-current="page">
           <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#home"></use></svg>
           Home
-        </a>
+        </Link >
       </li>
       <li>
-        <a href="#" onClick={()=>setSelectedTag('Create Post')} className={`${selectedTag === 'Create Post' && 'active'} nav-link link-body-emphasis text-white `}>
+        <Link  to="create-post" onClick={()=>console.log('create-post clicked')} className='nav-link  text-white '>
           <svg className="bi pe-none me-2 " width="16" height="16"><use xlinkHref="#speedometer2"></use></svg>
           Create Post
-        </a>
+        </Link >
       </li>
 
     </ul>

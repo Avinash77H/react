@@ -7,6 +7,7 @@ import CreatePost from './components/CreatePost'
 import PostList from './components/PostList' 
 import { useState } from 'react'
 import PostListProvider from './store/Post-list-store'
+import { Outlet } from 'react-router-dom'
 
 
 function App() {
@@ -20,8 +21,8 @@ function App() {
       <Sidebar selectedTag={selectedTag} setSelectedTag={setSelectedTag}/>
      <div className='content'>
      <Header/>
-     {selectedTag === 'Home'?<PostList/>:<CreatePost/>}
-    
+     {/* {selectedTag === 'Home'?<PostList/>:<CreatePost/>} */}
+    <Outlet/>
      <Footer/>
      </div>
     </div>
