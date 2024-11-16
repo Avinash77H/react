@@ -10,6 +10,8 @@ import DashBoard from "./components/DashBoard.jsx";
 import Profile from "./components/Profile.jsx";
 import WhishList from "./components/WhishList.jsx";
 import Bag from "./components/Bag.jsx";
+import { Provider } from "react-redux";
+import myntraStore from "./store/index.js";
 
 
 const router = createBrowserRouter([
@@ -50,8 +52,11 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    <Provider store={myntraStore}>
     <RouterProvider router={router}>
     <App/>
     </RouterProvider>
+    </Provider>
+   
   </StrictMode>
 );

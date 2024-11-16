@@ -2,7 +2,7 @@ import React from 'react'
 
 function DashBoard() {
   return (
-    <div>
+    <div className='center-text'>
       Dashboard page
     </div>
   )

@@ -2,7 +2,7 @@ import React from 'react'
 
 function Bag() {
   return (
-    <div>
+    <div className='center-text'>
       Bag page
     </div>
   )

@@ -2,7 +2,7 @@ import React from 'react'
 
 function Shop() {
   return (
-    <div>
+    <div className='center-text'>
       Shop page
     </div>
   )
