@@ -1,11 +1,11 @@
 import React from 'react'
 
-function DashBoard() {
+function Furniture() {
   return (
     <div className='center-text'>
-      Dashboard page
+      Furniture page
     </div>
   )
 }
 
-export default DashBoard
+export default Furniture

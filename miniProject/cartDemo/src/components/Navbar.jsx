@@ -17,8 +17,10 @@ function Navbar() {
             </NavLink>
             <div className='flex gap-8'>
                 <NavLink to='/'>Home</NavLink>
-                <NavLink to='/shop'>Shop</NavLink>
-                <NavLink to='/dashboard'>Dashboard</NavLink>
+                <NavLink to='/beauty'>Beauty</NavLink>
+                <NavLink to='/fragrances'>Fragrances</NavLink>
+                <NavLink to='/furniture'>Furniture</NavLink>
+                <NavLink to='/groceries'>Groceries</NavLink>
             </div>
             <div className='flex gap-4'>
                <NavLink to='/profile'>

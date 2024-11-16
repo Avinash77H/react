@@ -9,9 +9,6 @@ function FetchItems() {
 
   useEffect(()=>{
     if(fetchStatus.fetchDone) return;
-
-   
-
     dispatch(fetchStatusActions.markFetchingStarted())
     fetch("http://localhost:8080/items",)
     .then((res)=>res.json())
@@ -21,9 +18,6 @@ function FetchItems() {
       dispatch(itemActions.addInitialItems(items[0]))
     })
 
-      
-    
-    
   },[fetchStatus])
   
 

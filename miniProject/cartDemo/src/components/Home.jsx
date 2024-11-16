@@ -1,32 +1,29 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { addInitialItem } from '../store/itemSlice'
+import Card from './Card'
 
 
 
 function Home() {
 
   const data = useSelector((state)=>state.item)
+  
   const dispatch = useDispatch()
+  
   
   useEffect(()=>{
    fetch('https://dummyjson.com/products')
     .then((res)=>res.json())
-    .then((data)=>data.products)
-    .then((products)=>{
-      products.map((product)=>dispatch(product))
-    })
-    // .then((data)=>dispatch(data.products))
-    
-   
-
-    
+    .then((data)=>dispatch(addInitialItem(data.products)))
     
   },[])
-  console.log(data)
 
+
+  
   return (
-    <div >
-    
+    <div className='grid grid-cols-3 gap-8 gap-x-20 px-28'>
+     {data.map((item)=><Card key={item.id} item={item}/>)}
     </div>
   )
 }

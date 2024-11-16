@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Shop() {
+function Fragrances() {
   return (
     <div className='center-text'>
-      Shop page
+      Fragrances page
     </div>
   )
 }
 
-export default Shop
+export default Fragrances
