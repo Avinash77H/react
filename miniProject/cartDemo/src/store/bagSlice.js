@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const bagSlice = createSlice({
   name:'bag',
-  initialState:[1,3],
+  initialState:[],
   reducers:{
     addItem:(state,action)=>{
       state.push(action.payload)
@@ -13,5 +13,5 @@ const bagSlice = createSlice({
   }
 })
 
-export const {addItem,removeItem} = bagSlice
+export const {addItem,removeItem} = bagSlice.actions
 export default bagSlice
