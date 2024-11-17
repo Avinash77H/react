@@ -4,8 +4,10 @@ import { VscAccount } from "react-icons/vsc";
 import { CiHeart } from "react-icons/ci";
 import { IoBag } from "react-icons/io5";
 import { NavLink, Outlet } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 function Navbar() {
+  const likedItems = useSelector((state)=>state.like)
   return (
     <div>
       <div>
@@ -24,20 +26,21 @@ function Navbar() {
             </div>
             <div className='flex gap-4'>
                <NavLink to='/profile'>
-               <div className='flex flex-col gap-1 items-center'>
-                    < VscAccount/>
+               <div className='flex flex-col  items-center'>
+                    < VscAccount className='size-6'/>
                     <p className='text-sm'>Profile</p>
                 </div>
                </NavLink>
                 <NavLink to='/whishlist'>
-                <div className='flex flex-col gap-1 items-center'>
-                    < CiHeart/>
+                <div className='flex flex-col  items-center relative '>
+                    < CiHeart className=' size-6'/>
+                    <div className='absolute bg-red-500 size-4 rounded-full right-2 -top-1 flex justify-center items-center text-white'>{likedItems.length}</div>
                     <p className='text-sm'>Whishlist</p>
                 </div>
                 </NavLink>
                 <NavLink to='bag'>
-                <div className='flex flex-col gap-1 items-center'>
-                    < IoBag/>
+                <div className='flex flex-col  items-center'>
+                    < IoBag className='size-6'/>
                     <p className='text-sm'>Bag</p>
                 </div>
                 </NavLink>

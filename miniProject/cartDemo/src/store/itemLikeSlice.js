@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const itemLikeSlice =createSlice({
     name:'like',
-    initialState:[1,3,5],
+    initialState:[],
     reducers:{
         liked:(state,action)=>{
            state.push(action.payload)

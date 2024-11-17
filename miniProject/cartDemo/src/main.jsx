@@ -62,12 +62,12 @@ const router = createBrowserRouter([
 
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
+ 
     <Provider store={myntraStore}>
     <RouterProvider router={router}>
     <App/>
     </RouterProvider>
     </Provider>
    
-  </StrictMode>
+  
 );
