@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 
 function Navbar() {
   const likedItems = useSelector((state)=>state.like)
+  const bagItems = useSelector((state)=>state.bag)
   return (
     <div>
       <div>
@@ -39,8 +40,9 @@ function Navbar() {
                 </div>
                 </NavLink>
                 <NavLink to='bag'>
-                <div className='flex flex-col  items-center'>
+                <div className='flex flex-col  items-center relative'>
                     < IoBag className='size-6'/>
+                    <div className='absolute bg-red-500 size-4 rounded-full -right-2 -top-1 flex justify-center items-center text-white'>{bagItems.length}</div>
                     <p className='text-sm'>Bag</p>
                 </div>
                 </NavLink>
