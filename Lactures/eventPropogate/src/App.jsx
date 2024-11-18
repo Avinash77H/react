@@ -7,7 +7,7 @@ import './App.css'
 function App() {
 
 const hadleGrandParendClick = (e)=>{
-  console.log('Grandparent called ')
+  console.log('Grandparent called')
 }
 const handleParentClick = (e)=>{
   console.log('Parent called')
