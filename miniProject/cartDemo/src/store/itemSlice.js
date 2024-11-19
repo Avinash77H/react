@@ -8,10 +8,7 @@ import { createSlice } from "@reduxjs/toolkit";
             return action.payload   
         }
     }
-    
 })
-
-
 
 export const {addInitialItem} = itemSlice.actions
 export default itemSlice
