@@ -33,7 +33,6 @@ const List=createBrowserRouter([
                 path:'about',
                 element:<About/>
             }
-
         ]
     }
 ])
