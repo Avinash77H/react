@@ -7,9 +7,11 @@ import './App.css'
 function App() {
 
 const hadleGrandParendClick = (e)=>{
+  // e.stopPropagation()
   console.log('Grandparent called')
 }
 const handleParentClick = (e)=>{
+ 
   console.log('Parent called')
 }
 const handleChildClick = ()=>{
