@@ -2,7 +2,7 @@ const redux = require("redux")
 
 const createStore = redux.createStore;
 
-const initialState = {
+const initialState =  {
     chocolate:10,
     cake: 17,
     drink:7
