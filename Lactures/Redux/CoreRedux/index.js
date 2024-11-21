@@ -23,9 +23,11 @@ const reducer = (state=initialState,action)=>{
     }
 }
 
-const store = createStore(reducer)
 
+const store = createStore(reducer)
 console.log(store.getState())
 
+store.dispatch({type:'BUY_CAKE'})
+store.dispatch({type:'BUY_CAKE'})
 store.dispatch({type:'BUY_CAKE'})
 console.log(store.getState())
