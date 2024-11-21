@@ -5,8 +5,6 @@ import { FaCheck } from "react-icons/fa";
 import { MdDelete } from "react-icons/md";
 import Clock from './component/Clock';
 
-
-
 function App() {
   const[inputValue,setInputValue] = useState("");
   const[todo,setTodo] = useState([]);
@@ -27,6 +25,15 @@ function App() {
     setTodo((prev)=>[...prev,inputValue])
     setInputValue("")
   }
+
+  const handleDelete = (index)=>{
+    const filteredItem = todo.filter((todo,todoIndex)=> todoIndex !== index)
+    setTodo(filteredItem)
+  }
+
+  const handleClearAll = ()=>{
+    setTodo([])
+  }
   
   return (
    <>
@@ -44,12 +51,16 @@ function App() {
               <span className='w-1/2'>{todo}</span>
               <div className='flex gap-4'>
               <button className='bg-green-500 rounded-full p-1 text-white'><FaCheck/></button>
-              <button className='bg-red-500 rounded-full p-1 text-white'><MdDelete/></button>
+              <button className='bg-red-500 rounded-full p-1 text-white' onClick={()=>handleDelete(index)}><MdDelete/></button>
               </div>
               </li>)}
           </ul>
+         
         </div>
       </section>
+      {todo.length !== 0 && <section>
+      <button className='bg-black rounded-full p-1 text-white' onClick={handleClearAll}>Clear All</button>
+      </section>}
     </section>
    </>
   )

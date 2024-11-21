@@ -23,7 +23,7 @@ function Clock() {
 
     return (()=>clearInterval(interval))
   },[])
-  console.log('hey')
+  // console.log('hey')
   return (
     <h2 className=''>{dateTime}</h2>
   )
