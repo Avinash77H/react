@@ -1,69 +1,77 @@
+import { useState } from "react";
+import "./App.css";
 
-import { useState } from 'react';
-import './App.css'
-import { FaCheck } from "react-icons/fa";
-import { MdDelete } from "react-icons/md";
-import Clock from './component/Clock';
+import Clock from "./component/Clock";
+import Form from "./component/Form";
+import TodoList from "./component/TodoList";
 
 function App() {
-  const[inputValue,setInputValue] = useState("");
-  const[todo,setTodo] = useState([]);
+  const [todo, setTodo] = useState([]);
 
-  const handleInput = (value)=>{
-    setInputValue(value);
+  const handleFormSubmit = (inputValue) => {
+    const {id,content,checked} = inputValue
+    if (!content) return;
+
+    // if (todo.includes(inputValue)) {
+    //   return;
+    // }
+
+      const todoContentMatch = todo.find((curTask)=>curTask.content === content);
+      if(todoContentMatch) return;
+
+    setTodo((prev) => [...prev, {id,content,checked}]);
+  };
+
+  const handleDelete = (index) => {
+    const filteredItem = todo.filter((todo, todoIndex) => todoIndex !== index);
+    setTodo(filteredItem);
+  };
+
+  const handleClearAll = () => {
+    setTodo([]);
+  }; 
+
+  const handleChecked = (content)=>{
+    console.log('checked method called')
+    const updateTask  = todo.map((curTask)=>{
+      if(curTask.content === content){
+        return {...curTask,checked:!curTask.checked}
+      }
+      else{
+        return curTask
+      }
+    });
+    setTodo(updateTask)
   }
 
-  const handleFormSubmit = (event)=>{
-    event.preventDefault()
-    if(!inputValue) return;
-
-    if(todo.includes(inputValue)){
-      setInputValue("")
-      return
-    }
-
-    setTodo((prev)=>[...prev,inputValue])
-    setInputValue("")
-  }
-
-  const handleDelete = (index)=>{
-    const filteredItem = todo.filter((todo,todoIndex)=> todoIndex !== index)
-    setTodo(filteredItem)
-  }
-
-  const handleClearAll = ()=>{
-    setTodo([])
-  }
-  
   return (
-   <>
-    <section className='flex flex-col gap-4'>
-      <h1 className='text-3xl font-bold'>To Do App</h1>
-      <Clock/>
-      <section className='flex flex-col gap-4 items-center'>
-        <form onSubmit={handleFormSubmit}>
-          <input type="text" placeholder='Enter Your Task' onChange ={(event)=>handleInput(event.target.value)} value={inputValue} className='border border-gray-500 px-2 py-1 border-r-white focus:outline-none'/>
-          <button type='submit' className='bg-purple-500 text-white px-4 py-1 rounded-r-md border border-gray-500 border-l-white'>Add</button>
-        </form>
-        <div>
-          <ul>
-           {todo.map((todo,index)=> <li key={index} className='flex gap-20 border border-gray-500 px-4 py-1 rounded-full items-center mt-4'>
-              <span className='w-1/2'>{todo}</span>
-              <div className='flex gap-4'>
-              <button className='bg-green-500 rounded-full p-1 text-white'><FaCheck/></button>
-              <button className='bg-red-500 rounded-full p-1 text-white' onClick={()=>handleDelete(index)}><MdDelete/></button>
-              </div>
-              </li>)}
-          </ul>
-         
-        </div>
+    <>
+      <section className="flex flex-col gap-4 items-center">
+        <h1 className="text-3xl font-bold text-center">To Do App</h1>
+        <Clock />
+        <section className="flex flex-col gap-4 items-center">
+          <Form addTodo={handleFormSubmit} />
+          <div>
+            <ul>
+              {todo.map((todo, index) => (
+                <TodoList key={index} todo={todo.content} index={index} deleteMethod={handleDelete} checked={todo.checked} checkedMethod={handleChecked}/>
+              ))}
+            </ul>
+          </div>
+        </section>
+        {todo.length !== 0 && (
+          <section>
+            <button
+              className="bg-black rounded-full p-1 text-white "
+              onClick={handleClearAll}
+            >
+              Clear All
+            </button>
+          </section>
+        )}
       </section>
-      {todo.length !== 0 && <section>
-      <button className='bg-black rounded-full p-1 text-white' onClick={handleClearAll}>Clear All</button>
-      </section>}
-    </section>
-   </>
-  )
+    </>
+  );
 }
 
-export default App
+export default App;
