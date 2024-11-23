@@ -13,20 +13,6 @@ const initialState =  {
     drink:7
 }
 
-// const reducer = (state=initialState,action)=>{
-//     switch (action.type) {
-//         case 'BUY_CHOCOLATE': return{
-//             ...state,chocolate:state.chocolate - 1
-//         }
-//         case 'BUY_CAKE': return{
-//             ...state,cake:state.cake - 1
-//         }
-//         case 'BUY_DRINK': return{
-//             ...state,drink:state.drink - 1
-//         }
-//         default: return state;
-//     }
-// }
 
 
 const chocoReducer = (state=initialState,action)=>{
@@ -54,7 +40,7 @@ const rootReducer = combineReducers({
 
 
 const store = createStore(rootReducer,applyMiddleware(logger))
-console.log(store.getState())
+// console.log(store.getState())
 
 store.dispatch({type:'BUY_CAKE'})
 // store.dispatch({type:'BUY_CAKE'})
