@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 
-function Form({addTodo}) {
+function Form({addTodo}){
   const[inputValue,setInputValue] = useState({id:"",content:"",checked:false});
 
   const handleInput = (value)=>{
@@ -11,7 +11,7 @@ function Form({addTodo}) {
   const handleFormSubmit = (event)=>{
     event.preventDefault();
     addTodo(inputValue)
-    setInputValue({id:"",content:"",checked:false})
+    setInputValue({id:"",content:"",checked:false}) // for empty input filed
   }
   return (
     <form onSubmit={handleFormSubmit}>
