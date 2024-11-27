@@ -1,26 +1,33 @@
 import { useState } from "react";
 import "./App.css";
-
 import Clock from "./component/Clock";
 import Form from "./component/Form";
 import TodoList from "./component/TodoList";
 
+const todoKey = "reactTodo"
+
 function App() {
-  const [todo, setTodo] = useState([]);
+  
+  const [todo, setTodo] = useState(()=>{
+   const todoItems = localStorage.getItem(todoKey)
+   if(!todoItems) return [];
+   
+   return JSON.parse(todoItems)
+  });
 
   const handleFormSubmit = (inputValue) => {
     const {id,content,checked} = inputValue
     if (!content) return;
-
-    // if (todo.includes(inputValue)) {
-    //   return;
-    // }
 
       const todoContentMatch = todo.find((curTask)=>curTask.content === content);
       if(todoContentMatch) return;
 
     setTodo((prev) => [...prev, {id,content,checked}]);
   };
+
+  // todo add into localStorage
+
+  localStorage.setItem(todoKey,JSON.stringify(todo))
 
   const handleDelete = (index) => {
     const filteredItem = todo.filter((todo, todoIndex) => todoIndex !== index);
@@ -32,7 +39,6 @@ function App() {
   }; 
 
   const handleChecked = (content)=>{
-    console.log('checked method called')
     const updateTask  = todo.map((curTask)=>{
       if(curTask.content === content){
         return {...curTask,checked:!curTask.checked}
