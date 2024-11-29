@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+    .header{
+        @apply bg-purple-500 text-white font-bold text-center text-3xl py-2
+    }
+}
