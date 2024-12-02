@@ -1,8 +1,9 @@
 import { ADD_TO_CART,REMOVE_TO_CART,EMPTY_CART,CART_TO_WHISHLIST,ADD_TO_WHISHLIST,REMOVE_TO_WHISHLIST,EMPTY_WHISHLIST,WHISHLIST_TO_CART } from "./Constant";
 
-export const add_to_cart = ()=>{
+export const add_to_cart = (product)=>{
   return {
-    type:ADD_TO_CART
+    type:ADD_TO_CART,
+    payload:product
   }
 }
 export const remove_to_cart = ()=>{

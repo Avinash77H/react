@@ -1,6 +1,6 @@
 import { ADD_TO_WHISHLIST,REMOVE_TO_WHISHLIST,EMPTY_WHISHLIST,WHISHLIST_TO_CART } from "./Constant";
 
-const whishlistReducer = (state,action)=>{
+const whishlistReducer = (state = [],action)=>{
   switch(action.type){
     case ADD_TO_WHISHLIST:return{
 

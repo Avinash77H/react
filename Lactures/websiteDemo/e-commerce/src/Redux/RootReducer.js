@@ -1,10 +1,10 @@
 import cartReducer from "./CartReducer";
 import whishlistReducer from "./WhishlistReducer";
 import productReducer from "./ProductReducer";
-import {combineReducer} from "redux"
+import {combineReducers} from "redux";
 
 
-const rootReducer = combineReducer({
+const rootReducer = combineReducers({
   cart:cartReducer,
   whishList : whishlistReducer,
   product : productReducer

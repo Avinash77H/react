@@ -22,7 +22,6 @@ function Layout() {
             <Route path='/whishlist' element={<Whishlist/>}></Route>
             <Route path='/cart' element={<Cart/>}></Route>
             <Route path='*' element={<Error/>}></Route>
-            
         </Routes>
       </BrowserRouter>
     </div>
