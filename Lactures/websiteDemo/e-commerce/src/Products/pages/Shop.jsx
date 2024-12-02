@@ -2,10 +2,10 @@ import React from 'react'
 import {useDispatch, useSelector} from 'react-redux'
 import { product_set } from '../../Redux/ProductAction';
 import { add_to_cart } from '../../Redux/Actions';
+import { add_to_whishlist } from '../../Redux/Actions';
 
 function Shop() {
   const productData = useSelector(state=>state.product);
-  console.log(productData)
 
   const dispatch = useDispatch()
   
@@ -28,6 +28,7 @@ function Shop() {
               <li>{item.color}</li>
               <li>{item.price}</li>
               <button onClick={() => dispatch(add_to_cart(item))}>ADDTOCART</button>
+              <button onClick={()=>dispatch(add_to_whishlist(item))} className='text-white border px-2 py-1 border-white'>Add To WhishList</button>
             </ul>
           )
         })

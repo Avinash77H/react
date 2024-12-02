@@ -21,9 +21,10 @@ export const cart_to_whishlist = ()=>{
     type:CART_TO_WHISHLIST
   }
 }
-export const add_to_whishlist = ()=>{
+export const add_to_whishlist = (whishlistProduct)=>{
   return {
-    type:ADD_TO_WHISHLIST
+    type:ADD_TO_WHISHLIST,
+    payload:whishlistProduct
   }
 }
 export const remove_to_whishlist = ()=>{

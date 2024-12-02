@@ -2,9 +2,7 @@ import { ADD_TO_WHISHLIST,REMOVE_TO_WHISHLIST,EMPTY_WHISHLIST,WHISHLIST_TO_CART 
 
 const whishlistReducer = (state = [],action)=>{
   switch(action.type){
-    case ADD_TO_WHISHLIST:return{
-
-    }
+    case ADD_TO_WHISHLIST:return[...state,action.payload]
     case REMOVE_TO_WHISHLIST:return{
 
     }
