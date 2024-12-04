@@ -16,7 +16,6 @@ const cartReducer = (state = [], action) => {
       if(newState[action.payload] !== undefined){
         newState.splice(action.payload,1)
       }
-
       return newState;
     }
     case EMPTY_CART:
