@@ -6,9 +6,10 @@ export const add_to_cart = (product)=>{
     payload:product
   }
 }
-export const remove_to_cart = ()=>{
+export const remove_to_cart = (remove_card_id)=>{
   return {
-    type:REMOVE_TO_CART
+    type:REMOVE_TO_CART,
+    payload:remove_card_id
   }
 }
 export const empty_cart = ()=>{

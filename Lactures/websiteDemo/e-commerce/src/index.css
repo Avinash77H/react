@@ -7,4 +7,13 @@
     .header{
         @apply bg-purple-500 text-white font-bold text-center text-3xl py-2
     }
+    .btn{
+        @apply bg-green-400 px-2 py-1  rounded-md ml-2 text-black font-semibold
+    }
+    .remove-btn{
+        @apply bg-red-400 px-2 py-1  rounded-md ml-2 text-black font-semibold
+    }
+    .active{
+        @apply border-b-2 border-red-500
+    }
 }

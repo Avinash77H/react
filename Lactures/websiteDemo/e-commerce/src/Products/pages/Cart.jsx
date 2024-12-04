@@ -1,19 +1,25 @@
 import React from 'react'
 import { useSelector,useDispatch } from 'react-redux'
+import { remove_to_cart } from '../../Redux/Actions'
 
 function Cart() {
-  const CartData = useSelector(state=>state.cart)
+  const cartData = useSelector(state=>state.cart)
+  console.log(cartData)
+  const dispatch = useDispatch()
   return (
     <div>
       <h1 className='header'>this is Cart page</h1>
       {
-          CartData.map(item => {
+          cartData.map((item,index) => {
             return (
-              <ul key={item.id} className='bg-gray-500 border-2 '>
+             <div key={item.id}>
+               <ul className='bg-gray-500 border-2 text-white'>
                 <li>{item.name}</li>
                 <li>{item.color}</li>
                 <li>{item.price}</li>
+               <button className='remove-btn' onClick={() => dispatch(remove_to_cart(index))}>remove</button>
               </ul>
+              </div>
             )
           })
         }
