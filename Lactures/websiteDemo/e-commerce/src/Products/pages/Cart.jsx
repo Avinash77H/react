@@ -17,7 +17,7 @@ function Cart() {
                 <li>{item.name}</li>
                 <li>{item.color}</li>
                 <li>{item.price}</li>
-               <button className='remove-btn' onClick={() => dispatch(remove_to_cart(index))}>remove</button>
+               <button className='remove-btn' onClick={() => dispatch(remove_to_cart(item.id))}>remove</button>
               </ul>
               </div>
             )
