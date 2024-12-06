@@ -20,7 +20,7 @@ function Card({item}) {
   return (
     <div className='flex flex-col gap-2 px-16 border border-gray-300 relative'>
         <div className='absolute right-8 top-4'>{isLike?<FcLike onClick={handleDislike} className='size-8'/>:<FcLikePlaceholder onClick={handleLike}  className='size-8'/>}</div>
-        <img src={item.images} alt="" className='size-44'/>
+        <img src={item.thumbnail} alt="" className='size-44'/>
          <div>{description}  <span onClick={()=>setText(!text)} className='text-sky-500 cursor-pointer'>{text?'...Read More':'Less More'}</span></div>
          <p>{item.category}</p>
          <p>${item.price}</p>
