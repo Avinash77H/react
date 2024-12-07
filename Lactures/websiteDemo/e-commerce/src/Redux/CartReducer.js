@@ -11,17 +11,10 @@ const cartReducer = (state = [], action) => {
       return [...state, action.payload];
     }
     case REMOVE_TO_CART: {
-    const newState =  state.filter((item)=>(
+    const newState = state.filter((item)=>(
         item.id !== action.payload
       ));
     return newState;
-      /* return [...state,action.payload]
-
-       const newState = [...state];
-       if(newState[action.payload] !== undefined){
-         newState.splice(action.payload,1)
-       }
-       return newState;  */
     }
     case EMPTY_CART:
       return {};
