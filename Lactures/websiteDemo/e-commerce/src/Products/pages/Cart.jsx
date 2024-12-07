@@ -12,14 +12,20 @@ function Cart() {
       {
           cartData.map((item,index) => {
             return (
-             <div key={item.id}>
-               <ul className='bg-gray-500 border-2 text-white'>
-                <li>{item.name}</li>
-                <li>{item.color}</li>
-                <li>{item.price}</li>
-               <button className='remove-btn' onClick={() => dispatch(remove_to_cart(item.id))}>remove</button>
-              </ul>
+              <div key={item.id} className=' bg-gray-100 w-1/3 flex flex-col items-center py-2 gap-2 mt-4'>
+              <div>
+                <img src={item.thumbnail} alt="" className='w-full'/>
               </div>
+              <div>
+                <ul>
+                  <li>{item.title}</li>
+                  <li>{item.price}</li>
+                </ul>
+              </div>
+              <div className='flex '>
+              <button className='remove-btn' onClick={() => dispatch(remove_to_cart(item.id))}>remove</button>
+              </div>
+            </div>
             )
           })
         }
