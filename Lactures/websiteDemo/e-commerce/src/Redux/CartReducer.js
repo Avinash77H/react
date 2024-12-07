@@ -8,7 +8,7 @@ import {
 const cartReducer = (state = [], action) => {
   switch (action.type) {
     case ADD_TO_CART: {
-      return [...state, action.payload];
+      return [...state, action.payload ];
     }
     case REMOVE_TO_CART: {
     const newState = state.filter((item)=>(
