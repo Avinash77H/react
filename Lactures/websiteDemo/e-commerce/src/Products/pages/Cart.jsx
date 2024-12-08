@@ -9,8 +9,9 @@ function Cart() {
   return (
     <div>
       <h1 className='header'>this is Cart page</h1>
-      {
-          cartData.map((item,index) => {
+      <div>
+        {
+          cartData.length === 0 ? <div className='text-center mt-12 text-3xl font-bold'>No Products</div>:cartData.map((item,index) => {
             return (
               <div key={item.id} className=' bg-gray-100 w-1/3 flex flex-col items-center py-2 gap-2 mt-4'>
               <div>
@@ -29,6 +30,7 @@ function Cart() {
             )
           })
         }
+      </div>
     </div>
   )
 }

@@ -28,9 +28,10 @@ export const add_to_whishlist = (whishlistProduct)=>{
     payload:whishlistProduct
   }
 }
-export const remove_to_whishlist = ()=>{
+export const remove_to_whishlist = (remove_card_id)=>{
   return {
-    type:REMOVE_TO_WHISHLIST
+    type:REMOVE_TO_WHISHLIST,
+    payload:remove_card_id
   }
 }
 export const empty_whishlist = ()=>{

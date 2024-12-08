@@ -5,7 +5,7 @@
 
 @layer components{
     .header{
-        @apply bg-purple-500 text-white font-bold text-center text-3xl py-2
+        @apply bg-purple-500 text-white font-bold text-center text-3xl py-2 mt-12
     }
     .btn{
         @apply bg-green-400 px-2 py-1  rounded-md ml-2 text-white hover:text-black duration-500 
@@ -13,7 +13,7 @@
     .remove-btn{
         @apply bg-red-400 px-2 py-1  rounded-md ml-2 text-white  hover:text-black duration-500
     }
-    .active{
-        @apply border-b-2 border-red-500
-    }
+    /* .active{
+        @apply border-b-2 border-red-500 
+    } */
 }

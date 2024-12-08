@@ -10,7 +10,7 @@ function Navbar() {
   const cartProduct = useSelector((state)=>state.cart)
   return (
     <div>
-      <nav className='flex justify-between items-center px-20 py-2 bg-gray-200 '>
+      <nav className='flex justify-between items-center px-20 py-2 bg-gray-200 w-full fixed top-0 z-50'>
         <div>
             <img src={logo} alt="" className='size-8'/>
         </div>
