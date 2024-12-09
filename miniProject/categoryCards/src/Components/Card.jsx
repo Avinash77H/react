@@ -21,7 +21,7 @@ function Card({ item }) {
       key={item.id}
       className="flex flex-col items-center gap-4 w-full border-2 border-black relative"
     >
-      <img src={item.images} alt="" className="w-[33.33%]" />
+      <img src={item.thumbnail} alt="" className="w-[33.33%]" />
       <p>{item.title}</p>
       <p>{item.price}</p>
       <p>{item.category}</p>
