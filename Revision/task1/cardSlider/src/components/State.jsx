@@ -1,11 +1,26 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import { AnimalList } from '../Data'
 import { useState } from 'react';
 
 function State() {
 
-    let [index,setIndex] = useState(0)
+    let [index,setIndex] = useState(0);
+    let inputValue = useRef("");
+    const inputRef = useRef(null);
     
+    
+
+    function handleInput (e){
+        inputValue.current = e.target.value;
+    }
+
+    function resetInput(){
+    //    inputValue.current = "";
+       if(inputRef){
+        inputRef.current.value = ""
+       }
+    }
+
     let data = [AnimalList[index]];
 
     function handleNext(){
@@ -16,6 +31,7 @@ function State() {
         else{
             setIndex((prev)=>prev + 1)
         }
+        resetInput()
     }
 
     function handlePrev(){
@@ -25,10 +41,19 @@ function State() {
        else{
         setIndex((prev)=>prev - 1)
        }
+       resetInput();
     }
+    console.log('re reder state component')
+    console.log(inputValue.current)
+   
 
   return (
-   <div className='h-screen flex justify-around items-center '>
+   <div className='h-screen flex flex-col justify-around items-center '>
+    <div>
+        <label htmlFor="Name">Enter Name:</label>
+        <input type="text" className='border border-black' name='Name' onChange={(e)=>handleInput(e)} ref={inputRef}/>
+    </div>
+    <div className='w-full flex items-center justify-around border-2 border-black'>
     <button className="prev btn" onClick={handlePrev}>Prev</button>
     <div className='card'>
         {data.map((item)=>(
@@ -75,6 +100,7 @@ function State() {
         ))}
     </div>
     <button className="next btn" onClick={handleNext}>Next</button>
+    </div>
    </div>
   )
 }
