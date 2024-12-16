@@ -1,0 +1,11 @@
+.anime{
+    animation: slide 1s linear;
+}
+    @keyframes slide {
+        0%{
+            transform: translateX(500px);
+        }
+        100%{
+            transform: translate(0px);
+        }
+    }

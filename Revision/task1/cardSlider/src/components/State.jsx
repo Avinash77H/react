@@ -1,37 +1,27 @@
 import React, { useEffect, useRef } from 'react'
+import App from '../App';
 import { AnimalList } from '../Data'
 import { useState } from 'react';
 
 function State() {
 
     let [index,setIndex] = useState(0);
-    let inputValue = useRef("");
-    const inputRef = useRef(null);
     
+    let[isSlide,setIsSlide] = useState(false);
     
-
-    function handleInput (e){
-        inputValue.current = e.target.value;
-    }
-
-    function resetInput(){
-    //    inputValue.current = "";
-       if(inputRef){
-        inputRef.current.value = ""
-       }
-    }
-
     let data = [AnimalList[index]];
 
     function handleNext(){
-            
         if(index == 9 ){
             setIndex(0)
         }
         else{
             setIndex((prev)=>prev + 1)
+            setIsSlide(true)
+            setTimeout(()=>{
+                setIsSlide(false)
+            },1000)
         }
-        resetInput()
     }
 
     function handlePrev(){
@@ -41,21 +31,15 @@ function State() {
        else{
         setIndex((prev)=>prev - 1)
        }
-       resetInput();
     }
     console.log('re reder state component')
-    console.log(inputValue.current)
-   
 
   return (
-   <div className='h-screen flex flex-col justify-around items-center '>
-    <div>
-        <label htmlFor="Name">Enter Name:</label>
-        <input type="text" className='border border-black' name='Name' onChange={(e)=>handleInput(e)} ref={inputRef}/>
-    </div>
-    <div className='w-full flex items-center justify-around border-2 border-black'>
+   <div className='h-screen  justify-around items-center '>
     <button className="prev btn" onClick={handlePrev}>Prev</button>
-    <div className='card'>
+    <button className="next btn" disabled={isSlide?true:false} onClick={handleNext}>Next</button>
+    <div className='w-full flex items-center justify-around border-2 border-black'>
+    <div className={`card ${isSlide?'anime':''}`}>
         {data.map((item)=>(
             <div key={item.id} className="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
@@ -99,7 +83,7 @@ function State() {
             </div>
         ))}
     </div>
-    <button className="next btn" onClick={handleNext}>Next</button>
+    
     </div>
    </div>
   )
