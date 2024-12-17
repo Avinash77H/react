@@ -1,11 +1,24 @@
-.anime{
-    animation: slide 1s linear;
+/* .right_slide{
+    animation: right_anime 1s linear;
 }
-    @keyframes slide {
+    @keyframes right_anime {
         0%{
-            transform: translateX(500px);
+            transform: translateX(800px);
         }
         100%{
             transform: translate(0px);
         }
     }
+
+   
+.left_slide{
+    animation: left_anime 1s linear;
+}
+    @keyframes left_anime {
+        0%{
+            transform: translateX(-800px);
+        }
+        100%{
+            transform: translate(0px);
+        }
+    } */

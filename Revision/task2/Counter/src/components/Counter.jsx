@@ -1,0 +1,74 @@
+import React, { useEffect, useState } from 'react'
+
+function Counter() {
+  const [isRun,setIsRun] = useState(false);
+  const [count,setCount] = useState(0);
+  const [inputValue,setInputValue] = useState('');
+  const [theme,setTheme] = useState(true);
+  const [minute,setMinute] = useState(0);
+  const [second,setSecond] = useState(0);
+
+  useEffect(()=>{
+    const id = setInterval(()=>{
+      if(isRun && count > 0){
+        setCount((prev)=>prev - 1);
+      }
+      else if(count == 0){
+        setIsRun(false)
+      }
+    },1000)
+
+    return ()=>{
+      clearInterval(id)
+    }
+  },[isRun,count])
+
+  function handleStart(){
+    if(inputValue){
+
+      setIsRun(true)
+      setInputValue('')
+    }else{
+      alert("Please Enter Time")
+    }
+  }
+
+  function handlePause(){
+    setIsRun(false)
+  }
+
+  function handleReset(){
+    setCount(0)
+  }
+
+  function handleInput(e){
+    const value = parseInt(e.target.value);
+    const second =  value * 60;
+    setSecond(second)
+    setCount(value)
+    setInputValue(value)
+  }
+
+  function handleTheme(){
+    setTheme(!theme)
+  }
+
+ console.log(theme)
+  return (
+    <div className={`${theme?'bg-black text-white':'bg-white text-black'} h-screen flex flex-col items-center justify-center  gap-4 `}>
+      <h1 className='heading'>Counter</h1>
+      <div >
+        <input type="number" placeholder='Enter Time' className='border border-gray-500 px-2' value={inputValue}  onChange={(e)=>handleInput(e)} disabled={isRun}/>
+        <p className='text-center mt-4 text-2xl '>{count > 0?`${minute+ ":" + second} Remaining`:`Times up!`}</p>
+        <div className='flex gap-4 mt-4'>
+          <button className='btn bg-green-500' onClick={handleStart} disabled={isRun}>Start</button>
+          <button className='btn bg-red-500' onClick={handlePause}>Pause</button>
+          <button className='btn bg-purple-500' onClick={handleReset}>Reset</button>
+          <button className='btn bg-black' onClick={handleTheme}>Theme</button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Counter
