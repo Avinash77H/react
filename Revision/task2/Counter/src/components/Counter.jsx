@@ -26,7 +26,6 @@ function Counter() {
     if(inputValue){
       setIsRun(true)
       setTheme('bg-black')
-      // setInputValue('')
     }
   }
 
