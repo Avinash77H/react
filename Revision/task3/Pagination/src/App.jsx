@@ -1,6 +1,7 @@
 
 import './App.css'
-import Pagination from './components/Pagination'
+import Layout from './components/Layout'
+
 
 
 
@@ -10,7 +11,9 @@ function App() {
 
   return (
     <div>
-      <Pagination/>
+     
+      <Layout/>
+
     </div>
   )
 }
