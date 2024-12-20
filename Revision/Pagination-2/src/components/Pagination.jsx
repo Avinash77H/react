@@ -5,7 +5,7 @@ function Pagination() {
     const [data, setData] = useState([]);
     const [loader,setLoader] = useState(false);
     const [page,setPage] = useState(1);
-    const PRODCUTPERPAGE = 7;
+    const PRODCUTPERPAGE = 4;
     
   
 
@@ -64,7 +64,7 @@ function Pagination() {
             <button className='btn' onClick={()=>setPage((prev)=>prev - 1)} disabled={firstIndex <= 0}>prev</button>
             
             {
-                Array(PAGINATIONCOUNT).fill(null).map((item,index)=><div key={index} className='btn' onClick={()=>setPage(index+1)}>{index + 1}</div>)
+                Array(PAGINATIONCOUNT).fill(null).map((_,index)=><div key={index} className='btn' onClick={()=>setPage(index+1)}>{index + 1}</div>)
             }
             <button className='btn' onClick={()=>setPage((prev)=>prev + 1)} disabled={lastIndex >= data.length}>next</button>.
         </div>
