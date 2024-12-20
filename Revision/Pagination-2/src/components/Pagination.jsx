@@ -62,7 +62,6 @@ function Pagination() {
         </div>
         <div className='flex justify-center items-center'>
             <button className='btn' onClick={()=>setPage((prev)=>prev - 1)} disabled={firstIndex <= 0}>prev</button>
-            
             {
                 Array(PAGINATIONCOUNT).fill(null).map((_,index)=><div key={index} className='btn' onClick={()=>setPage(index+1)}>{index + 1}</div>)
             }
