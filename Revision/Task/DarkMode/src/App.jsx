@@ -1,7 +1,7 @@
 
 import './App.css'
-import Card from './componenets/Card'
-import ThemeButton from './componenets/ThemeButton'
+import Card from './components/Card'
+import ThemeButton from './components/ThemeButton'
 import ContextProvider from './Context/ContextProvider'
 
 function App() {
