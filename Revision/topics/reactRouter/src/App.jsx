@@ -1,14 +1,16 @@
 import './App.css'
-import NewVersion from './components/NewVersion'
-import OldVersion from './components/OldVersion'
+import Version3 from './components/Version3'
+import Version1 from './components/Version1'
+import Version2 from './components/Version2'
 
 
 
 function App() {
   return (
     <div>
-      <OldVersion />
-      {/* <NewVersion/> */}
+      {/* <Version1 /> */}
+      {/* <Version2/> */}
+      <Version3/>
     </div>
   )
 }
