@@ -7,8 +7,8 @@ import OldVersion from './components/OldVersion'
 function App() {
   return (
     <div>
-      {/* <OldVersion /> */}
-      <NewVersion/>
+      <OldVersion />
+      {/* <NewVersion/> */}
     </div>
   )
 }
