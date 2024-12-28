@@ -8,7 +8,7 @@ import Faq from './Faq'
 import Help from './Help'
 import ContactUs from './ContactUs'
 import CareerLayout from './CareerLayout'
-import Career from './Career'
+import Career, { CareerLoader } from './Career'
 
 function Version3() {
     const route=createBrowserRouter(
@@ -22,7 +22,7 @@ function Version3() {
               <Route path='contact' element={<ContactUs/>}/>
             </Route>
             <Route path='career' element={<CareerLayout/>}>
-              <Route index element={<Career/>}/>
+              <Route index element={<Career/>} loader={CareerLoader}/>
             </Route>
           </Route>
         )
