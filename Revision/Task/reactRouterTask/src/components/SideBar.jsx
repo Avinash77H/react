@@ -39,7 +39,7 @@ function SideBar() {
         </Link>
       </li>
       <li>
-        <Link to="/dashboard/details" className={`nav-link text-white ${active==='tab3'?'active':""}`} onClick={()=>setActive('tab3')}>
+        <Link to="/dashboard/details/1" className={`nav-link text-white ${active==='tab3'?'active':""}`} onClick={()=>setActive('tab3')}>
          
           Details
         </Link>

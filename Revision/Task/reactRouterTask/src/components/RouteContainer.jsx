@@ -38,13 +38,13 @@ function RouteContainer() {
               element:<Order/>
             },
             {
-              path:":id",
+              path:"/dashboard/products",
               element:<Products/>,
               loader:fetchData
 
             },
             {
-              path:"/dashboard/details",
+              path:"/dashboard/details/:id",
               element:<Details/>,
               loader:fetchDetails
             }
