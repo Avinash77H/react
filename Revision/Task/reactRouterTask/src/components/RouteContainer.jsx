@@ -7,6 +7,8 @@ import Shop from './Shop'
 import DashBoard from './DashBoard'
 import Order from './Order'
 import Products, { fetchData } from './Products'
+import Details from './Details'
+import { fetchDetails } from './Details'
 
 
 function RouteContainer() {
@@ -36,9 +38,15 @@ function RouteContainer() {
               element:<Order/>
             },
             {
-              path:"/dashboard/products",
+              path:":id",
               element:<Products/>,
               loader:fetchData
+
+            },
+            {
+              path:"/dashboard/details",
+              element:<Details/>,
+              loader:fetchDetails
             }
           ]
         }

@@ -39,17 +39,15 @@ function SideBar() {
         </Link>
       </li>
       <li>
-        <Link  className={`nav-link text-white ${active==='tab3'?'active':""}`} onClick={()=>setActive('tab3')}>
+        <Link to="/dashboard/details" className={`nav-link text-white ${active==='tab3'?'active':""}`} onClick={()=>setActive('tab3')}>
          
-          Customers
+          Details
         </Link>
       </li>
     </ul>
     <hr />
       </div>
-
       <Outlet/>
- 
     </div>
   )
 }

@@ -9,7 +9,7 @@ function Order() {
       <label htmlFor="order">Enter Order: </label>
       <input type="text" className='border border-gray-500' />
       <br />
-      <button className='btn btn-success mt-4' onClick={()=>nevigate("/")}>Submit</button>
+      <button className='btn btn-success mt-4' onClick={()=>nevigate("/home")}>Submit</button>
     </form>
   </div>  
   )
