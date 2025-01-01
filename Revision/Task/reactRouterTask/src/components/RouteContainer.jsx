@@ -6,9 +6,12 @@ import About from './About'
 import Shop from './Shop'
 import DashBoard from './DashBoard'
 import Order from './Order'
-import Products, { fetchData } from './Products'
+import Product from './Products'
 import Details from './Details'
 import { fetchDetails } from './Details'
+import Product1, { fetchData } from './Product1'
+import Products from './Products'
+
 
 
 function RouteContainer() {
@@ -18,7 +21,7 @@ function RouteContainer() {
       element:<Navbar/>,
       children:[
         {
-          path:"/",
+          index:true,
           element:<Home/>
         },
         {
@@ -34,20 +37,21 @@ function RouteContainer() {
           element:<DashBoard/>,
           children:[
             {
-              path:"/dashboard/orders",
-              element:<Order/>
-            },
-            {
-              path:"/dashboard/products",
+              index:true,
               element:<Products/>,
-              loader:fetchData
-
+              children:[
+                {
+                  path:"/product1",
+                  element:<Product1/>,
+                  loader:fetchData
+                },
+                {
+                  path:':id',
+                  element:<Details/>,
+                  loader:fetchDetails
+                }
+              ]
             },
-            {
-              path:"/dashboard/details/:id",
-              element:<Details/>,
-              loader:fetchDetails
-            }
           ]
         }
       ]
