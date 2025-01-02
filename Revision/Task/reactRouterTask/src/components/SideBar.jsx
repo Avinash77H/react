@@ -9,7 +9,7 @@ function SideBar() {
     <div className="flex gap-2">
       <div
         className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark"
-        style={{ width: 280 }}
+        style={{ width: 280,height:900 }}
       >
         <a
           href="/"
