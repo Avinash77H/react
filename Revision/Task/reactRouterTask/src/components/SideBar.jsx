@@ -1,14 +1,12 @@
-import React, { useState } from 'react'
-import { Outlet } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function SideBar() {
-
-  const [active, setActive] = useState('tab1');
+  const [active, setActive] = useState("tab1");
 
   return (
-    <div className='flex gap-2'>
-
+    <div className="flex gap-2">
       <div
         className="d-flex flex-column flex-shrink-0 p-3 text-bg-dark"
         style={{ width: 280, height: 500 }}
@@ -24,24 +22,24 @@ function SideBar() {
         </a>
         <hr />
         <ul className="nav nav-pills flex-column mb-auto">
-
-
           <li>
-            <Link to="/dashboard/products" className={`nav-link text-white ${active === 'tab2' ? 'active' : ""}`} onClick={() => setActive('tab2')}>
+            <Link
+              to="/dashboard/products"
+              className={`nav-link text-white ${
+                active === "tab2" ? "active" : ""
+              }`}
+              onClick={() => setActive("tab2")}
+            >
               Products
             </Link>
           </li>
-          <li>
-            <Link to="/dashboard/details/1" className={`nav-link text-white ${active === 'tab3' ? 'active' : ""}`} onClick={() => setActive('tab3')}>
-              Details
-            </Link>
-          </li>
         </ul>
+
         <hr />
       </div>
       <Outlet />
     </div>
-  )
+  );
 }
 
-export default SideBar
+export default SideBar;
