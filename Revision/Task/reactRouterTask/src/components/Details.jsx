@@ -4,7 +4,7 @@ import { useLoaderData, useLocation } from "react-router-dom";
 function Details() {
   const details = useLoaderData();
   const location = useLocation();
-  console.log("location:",location);
+
 
   return (
     <div className="w-full  flex flex-col items-center">
