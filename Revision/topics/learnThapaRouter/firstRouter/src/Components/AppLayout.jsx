@@ -8,7 +8,7 @@ import Loader from './Loader';
 function AppLayout() {
   const nevigation = useNavigation();
   console.log("state:",nevigation.state)
-  // if(nevigation.state === 'loading') return <Loader/>;
+  if(nevigation.state === 'loading') return <Loader/>;
   return (
     <>
       <Header/>

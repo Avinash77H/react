@@ -8,6 +8,7 @@ import ErrorElement from '../Components/ErrorElement'
 import Movies from '../Components/Movies'
 import GetMovieData from '../Components/GetMovieData'
 import MovieDetails from '../Components/MovieDetails'
+import GetMovieDataDetails from '../Components/GetMovieDataDetails'
 
 function Layout1() {
   const route = createBrowserRouter([
@@ -28,12 +29,11 @@ function Layout1() {
           path:"/movies",
           element:<Movies/>,
           loader:GetMovieData,
-          children:[
-            {
-              path:"/movies/movieDetails",
-              element:<MovieDetails/>
-            }
-          ]
+        },
+        {
+          path:"/movies/:id",
+          element:<MovieDetails/>,
+          loader:GetMovieDataDetails
         },
         {
           path:"/contactus",
