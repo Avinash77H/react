@@ -6,7 +6,6 @@ function BreadCrumb() {
   const path = location.pathname;
   const splitPath = path.split("/");
   const filterPath = splitPath.filter((path)=>path !== "");
-
   let space = "";
   const createLink = filterPath.map((path,index)=>{
     space += `/${path}`;
