@@ -11,7 +11,7 @@ function BreadCrumb() {
     space += `/${path}`;
 
     return <div key={index} >
-      <NavLink to={path}><span>/</span>{path}</NavLink>
+      <NavLink  to={path}><span>/</span>{path}</NavLink>
     </div>
   })
   
