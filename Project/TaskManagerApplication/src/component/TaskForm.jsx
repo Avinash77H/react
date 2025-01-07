@@ -4,7 +4,7 @@ function TaskForm({addTask}) {
   console.log("taskform re-render")
   const [taskName,setTaskName] = useState("");
   const [taskDescription,setTaskDescription] = useState("");
-  const [status,setStatus] = useState("pending");
+  const [status,setStatus] = useState("Pending");
 
  const handleSubmit = (e)=>{
   e.preventDefault();
@@ -13,6 +13,10 @@ function TaskForm({addTask}) {
     taskDescription,
     status
   }])
+
+  setTaskName("");
+  setTaskDescription("");
+  setStatus("Pending")
  }
 
   return (
@@ -22,17 +26,17 @@ function TaskForm({addTask}) {
 
        <div className='field_container'>
             <label htmlFor="task">Task:</label>
-            <input type="text" id='task' value={taskName} onChange={(e)=>setTaskName(e.target.value)}/>
+            <input type="text" id='task' value={taskName} onChange={(e)=>setTaskName(e.target.value)} required/>
        </div>
 
         <div className='field_container'>
             <label htmlFor="description">Description:</label>
-            <textarea id='description' value={taskDescription} onChange={(e)=>setTaskDescription(e.target.value)}></textarea>
+            <textarea id='description' value={taskDescription} onChange={(e)=>setTaskDescription(e.target.value)} required></textarea>
         </div>
 
         <div className='field_container'>
             <label htmlFor="status">Status:</label>
-            <select name="" id="status" value={status} onChange={(e)=>setStatus(e.target.value)}>
+            <select id="status" value={status} onChange={(e)=>setStatus(e.target.value)}>
                 <option value="Pending">Pending</option>
                 <option value="Completed">Completed</option>
             </select>

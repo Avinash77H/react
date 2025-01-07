@@ -1,7 +1,7 @@
 
 import "./App.css";
-import TaskCard from "./component/TaskCard";
 import FilterBar from "./component/FilterBar";
+import TaskCard from "./component/TaskCard";
 import TaskForm from "./component/TaskForm";
 import TaskList from "./component/TaskList";
 import { useState } from "react";
@@ -9,16 +9,23 @@ import { useState } from "react";
 
 function App() {
   const [taskList,setTaskList] = useState([]);
+  const [filterData,setFilterData] = useState({});
+  
+
+  function filterNewData(){
+    filterData()
+  }
+  
   console.log("app re-render")
-  console.log("taskLIst:",taskList);
+  console.log("filter Data:",filterData);
   return (
    <>
    <div className="h-screen ml-20 ">
   
    <TaskForm addTask={setTaskList}/>
-   {/* <FilterBar/>
+   <FilterBar taskList = {taskList} setFilterData = {setFilterData}/>
+   <TaskList taskList={taskList}/> 
    <TaskCard/>
-   <TaskList/> */}
 
    </div>
    </>
