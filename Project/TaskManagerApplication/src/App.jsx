@@ -1,4 +1,3 @@
-
 import "./App.css";
 import FilterBar from "./component/FilterBar";
 import TaskCard from "./component/TaskCard";
@@ -10,11 +9,13 @@ import { useState } from "react";
 function App() {
   const [taskList,setTaskList] = useState([]);
   const [filterData,setFilterData] = useState({});
+  const {searchText,selectValue} = filterData;
+
   
 
-  function filterNewData(){
-    filterData()
-  }
+  
+
+
   
   console.log("app re-render")
   console.log("filter Data:",filterData);
