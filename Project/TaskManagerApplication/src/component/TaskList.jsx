@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { ImSad2 } from "react-icons/im";
 
 
-function TaskList({taskList,setTaskList,newFilteredData}) {
+function TaskList({taskList,setTaskList,newFilteredData,setNewFilteredData}) {
+
+  
 
   function handleDelete(taskIndex){
     const newData = taskList.filter((item,index)=>(
@@ -28,6 +30,29 @@ function TaskList({taskList,setTaskList,newFilteredData}) {
       setTaskList(updateStatusData)
   }
 
+  function handleEdit(taskIndex){
+    setTaskList((prev)=>(
+      prev.map((task,i)=>(
+        i === taskIndex ? {...task,editMode:true}:task
+      ))
+   ))
+  }
+
+  function handleSave(taskIndex,updatedTask){
+    setTaskList((prev)=>(
+      prev.map((task,index)=>(
+        index === taskIndex ? {...task,taskName:updatedTask,editMode:false}:task
+      ))
+    ))
+  }
+  function handleFilteredSave(taskIndex,updatedTask){
+    setNewFilteredData((prev)=>(
+      prev.map((task,index)=>(
+        index === taskIndex ? {...task,taskName:updatedTask,filteredEditMode:false}:task
+      ))
+    ))
+  }
+
   return (
     <>
 
@@ -36,23 +61,37 @@ function TaskList({taskList,setTaskList,newFilteredData}) {
     
     {
       newFilteredData.length !== 0?newFilteredData.map((item,index)=>(
+        item.filteredEditMode ?<div className='editContainer'>
+        <input type="text" defaultValue={item.taskName} id='editInputFiled' onChange={(e)=>{
+         let newValue = e.target.value
+         item.taskName = newValue;
+        }}/>
+        <button className='save_btn' onClick={()=>handleFilteredSave(index,item.taskName)}>Save</button>
+      </div> :
         <div className='task_container' key={index}>
             <p>{item.taskName}</p>
             <div className='btn_container'>
                 <div>{item.status === 'Pending'?<button className='pending_btn' onClick={()=>handleStatus(index)}>Pending</button>:<button className='completed_btn' onClick={()=>handleStatus(index)}>Completed</button>}</div>
-                <button className='edit_btn'>Edit</button>
+                <button className='edit_btn' >Edit</button>
                 <button className='delete_btn' onClick={()=>handleDelete(index)}>Delete</button>
             </div>
         </div>
-      )):taskList.map((item,index)=>(
-        <div className='task_container' key={index}>
-            <p>{item.taskName}</p>
-            <div className='btn_container'>
-                <div>{item.status === 'Pending'?<button className='pending_btn' onClick={()=>handleStatus(index)}>Pending</button>:<button className='completed_btn' onClick={()=>handleStatus(index)}>Completed</button>}</div>
-                <button className='edit_btn'>Edit</button>
-                <button className='delete_btn' onClick={()=>handleDelete(index)}>Delete</button>
-            </div>
+      )):taskList.map((item,index)=> (
+        item.editMode?<div className='editContainer'>
+          <input type="text" defaultValue={item.taskName} id='editInputFiled' onChange={(e)=>{
+           let newValue = e.target.value
+           item.taskName = newValue;
+          }}/>
+          <button className='save_btn' onClick={()=>handleSave(index,item.taskName)}>Save</button>
+        </div>:<div className='task_container' key={index}>
+        <p>{item.taskName}</p>
+        <div className='btn_container'>
+            <div>{item.status === 'Pending'?<button className='pending_btn' onClick={()=>handleStatus(index)}>Pending</button>:<button className='completed_btn' onClick={()=>handleStatus(index)}>Completed</button>}</div>
+            <button className='edit_btn' onClick={()=>handleEdit(index)}>Edit</button>
+            <button className='delete_btn' onClick={()=>handleDelete(index)}>Delete</button>
         </div>
+    </div>
+        
       ))}
       
     </div>

@@ -4,9 +4,10 @@ import { CiSearch } from "react-icons/ci";
 function FilterBar({setFilterData}) {
   const[searchText,setSearchText] = useState("");
   const[selectValue,setSelectValue] = useState('All');
+  const[filteredEditMode,setFilteredEditMode] = useState(false)
 
   function handleSearchData(){
-    setFilterData({searchText,selectValue});
+    setFilterData({searchText,selectValue,filteredEditMode});
     setSearchText("")
   }
 

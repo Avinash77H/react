@@ -5,13 +5,15 @@ function TaskForm({addTask}) {
   const [taskName,setTaskName] = useState("");
   const [taskDescription,setTaskDescription] = useState("");
   const [status,setStatus] = useState("Pending");
+  const [editMode,setEditMode] = useState(false)
 
  const handleSubmit = (e)=>{
   e.preventDefault();
   addTask(prev=>[...prev,{
     taskName,
     taskDescription,
-    status
+    status,
+    editMode
   }])
 
   setTaskName("");

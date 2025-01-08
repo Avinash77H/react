@@ -183,3 +183,26 @@ select {
   padding: 0.3rem;
   border-radius: 0.5rem;
 }
+
+/* Edit container*/
+
+.editContainer{
+  background-color: paleturquoise;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+#editInputFiled{
+ padding: 2px 0px 2px 2px;
+  outline: none;
+}
+
+.save_btn{
+  background-color: #28a745;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}

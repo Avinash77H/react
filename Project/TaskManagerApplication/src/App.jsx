@@ -33,12 +33,14 @@ function App() {
     }
   }, [filterData]);
 
+  console.log("newFilteredData:",newFilteredData);
+
   return (
     <>
       <div className="h-screen ml-20 ">
         <TaskForm addTask={setTaskList} />
         <FilterBar taskList={taskList} setFilterData={setFilterData} />
-        <TaskList taskList={taskList} setTaskList={setTaskList} newFilteredData={newFilteredData} />
+        <TaskList taskList={taskList} setTaskList={setTaskList} newFilteredData={newFilteredData} setNewFilteredData={setNewFilteredData}/>
         <TaskCard />
       </div>
     </>
