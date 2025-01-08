@@ -10,6 +10,7 @@ function App() {
   const [newFilteredData, setNewFilteredData] = useState([]);
   const [filterData, setFilterData] = useState({});
   const { searchText, selectValue } = filterData;
+  const [updateTask,setUpdataTask] = useState("")
 
   useEffect(() => {
   
@@ -31,15 +32,20 @@ function App() {
         setNewFilteredData(taskList);
       }
     }
+
   }, [filterData]);
 
+  useEffect((taskList,newFilteredData)=>{
+    taskList
+  },[newFilteredData])
+  console.log("taskList Data:",taskList);
   console.log("newFilteredData:",newFilteredData);
 
   return (
     <>
       <div className="h-screen ml-20 ">
         <TaskForm addTask={setTaskList} />
-        <FilterBar taskList={taskList} setFilterData={setFilterData} />
+        <FilterBar  setFilterData={setFilterData} />
         <TaskList taskList={taskList} setTaskList={setTaskList} newFilteredData={newFilteredData} setNewFilteredData={setNewFilteredData}/>
         <TaskCard />
       </div>

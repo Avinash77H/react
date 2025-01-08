@@ -4,6 +4,8 @@ import { ImSad2 } from "react-icons/im";
 
 function TaskList({taskList,setTaskList,newFilteredData,setNewFilteredData}) {
 
+
+  
   
 
   function handleDelete(taskIndex){
@@ -70,6 +72,7 @@ function TaskList({taskList,setTaskList,newFilteredData,setNewFilteredData}) {
      }
   })
       setNewFilteredData(updateStatusData)
+      
 
   }
 
