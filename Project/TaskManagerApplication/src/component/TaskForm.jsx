@@ -1,7 +1,7 @@
 import React, { useState,memo } from 'react'
 
 function TaskForm({addTask}) {
-  console.log("taskform re-render")
+
   const [taskName,setTaskName] = useState("");
   const [taskDescription,setTaskDescription] = useState("");
   const [status,setStatus] = useState("Pending");

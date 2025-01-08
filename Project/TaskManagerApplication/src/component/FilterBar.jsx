@@ -3,7 +3,7 @@ import { CiSearch } from "react-icons/ci";
 
 function FilterBar({setFilterData}) {
   const[searchText,setSearchText] = useState("");
-  const[selectValue,setSelectValue] = useState('');
+  const[selectValue,setSelectValue] = useState('All');
 
   function handleSearchData(){
     setFilterData({searchText,selectValue});
