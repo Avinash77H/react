@@ -11,6 +11,23 @@ function TaskList({taskList,setTaskList,newFilteredData}) {
     setTaskList(newData)
   }
 
+  function handleStatus(taskIndex){
+    const updateStatusData = taskList.map((item,index)=>{
+     if(index === taskIndex){
+      if(item.status === "Pending"){
+        return {...item,status : "Completed"}
+      }
+      else{
+        return {...item,status: "Pending"}
+      }
+     }
+     else {
+      return item
+     }
+  })
+      setTaskList(updateStatusData)
+  }
+
   return (
     <>
 
@@ -22,7 +39,7 @@ function TaskList({taskList,setTaskList,newFilteredData}) {
         <div className='task_container' key={index}>
             <p>{item.taskName}</p>
             <div className='btn_container'>
-                <div>{item.status === 'Pending'?<button className='pending_btn'>Pending</button>:<button className='completed_btn'>Completed</button>}</div>
+                <div>{item.status === 'Pending'?<button className='pending_btn' onClick={()=>handleStatus(index)}>Pending</button>:<button className='completed_btn' onClick={()=>handleStatus(index)}>Completed</button>}</div>
                 <button className='edit_btn'>Edit</button>
                 <button className='delete_btn' onClick={()=>handleDelete(index)}>Delete</button>
             </div>
@@ -31,7 +48,7 @@ function TaskList({taskList,setTaskList,newFilteredData}) {
         <div className='task_container' key={index}>
             <p>{item.taskName}</p>
             <div className='btn_container'>
-                <div>{item.status === 'Pending'?<button className='pending_btn'>Pending</button>:<button className='completed_btn'>Completed</button>}</div>
+                <div>{item.status === 'Pending'?<button className='pending_btn' onClick={()=>handleStatus(index)}>Pending</button>:<button className='completed_btn' onClick={()=>handleStatus(index)}>Completed</button>}</div>
                 <button className='edit_btn'>Edit</button>
                 <button className='delete_btn' onClick={()=>handleDelete(index)}>Delete</button>
             </div>
