@@ -28,7 +28,7 @@ function TaskForm({addTask}) {
 
        <div className='field_container'>
             <label htmlFor="task">Task:</label>
-            <input type="text" id='task' value={taskName} onChange={(e)=>setTaskName(e.target.value)} required/>
+            <input className='task_input' type="text" id='task' value={taskName} onChange={(e)=>setTaskName(e.target.value)} required/>
        </div>
 
         <div className='field_container'>
