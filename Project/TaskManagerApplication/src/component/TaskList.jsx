@@ -21,7 +21,7 @@ function TaskList({taskList,setTaskList,newFilteredData,setNewFilteredData}) {
       if(item.status === "Pending"){
         return {...item,status : "Completed"}
       }
-      else{
+      else if(item.status === "Completed"){
         return {...item,status: "Pending"}
       }
      }
@@ -30,6 +30,7 @@ function TaskList({taskList,setTaskList,newFilteredData,setNewFilteredData}) {
      }
   })
       setTaskList(updateStatusData)
+      // setNewFilteredData(updateStatusData)
   }
 
   function handleEdit(taskIndex){
@@ -98,23 +99,24 @@ function TaskList({taskList,setTaskList,newFilteredData,setNewFilteredData}) {
     <div className='tasklist_container'>
     {(taskList.length === 0 && newFilteredData.length === 0 ) && <div className='not_available'>No Tasks Available <ImSad2 className='sad_emoji'/></div>}
     
+    {/* { (newFilteredData.length === 0 && taskList.length !== 0)  && <div className='not_available'>Completed Task Not Available <ImSad2 className='sad_emoji'/></div>} */}
     
 
     {
       newFilteredData.length !== 0?newFilteredData.map((item,index)=>(
         item.editMode ?<div className='editContainer'>
         <input type="text" defaultValue={item.taskName} id='editInputFiled' onChange={(e)=>{
-         let newValue = e.target.value
+         let newValue = e.target.value;
          item.taskName = newValue;
         }}/>
-        <button className='save_btn' onClick={()=>handleFilteredDataSave(index,item.taskName)}>Save</button>
+        <button className='save_btn' onClick={()=>handleSave(index,item.taskName)}>Save</button>
       </div> :
         <div className='task_container' key={index}>
             <p>{item.taskName}</p>
             <div className='btn_container'>
-                <div>{item.status === 'Pending'?<button className='pending_btn' onClick={()=>handleFilteredDataStatus(index)}>Pending</button>:<button className='completed_btn' onClick={()=>handleFilteredDataStatus(index)}>Completed</button>}</div>
-                <button className='edit_btn' onClick={()=>handleFilteredDataEdit(index)}>Edit</button>
-                <button className='delete_btn' onClick={()=>handleFilteredDataDelete(index)}>Delete</button>
+                <div>{item.status === 'Pending'?<button className='pending_btn' onClick={()=>handleStatus(index)}>Pending</button>:<button className='completed_btn' onClick={()=>handleStatus(index)}>Completed</button>}</div>
+                <button className='edit_btn' onClick={()=>handleEdit(index)}>Edit</button>
+                <button className='delete_btn' onClick={()=>handleDelete(index)}>Delete</button>
             </div>
         </div>
       )):taskList.map((item,index)=> (

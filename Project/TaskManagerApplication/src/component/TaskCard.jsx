@@ -9,6 +9,7 @@ function TaskCard() {
         <p>Task Description : Do some meditation and heavy Exercises</p>
         <p>Status: Completed</p>
       </div>
+      <div className='close_icon'><span>X</span></div>
     </div>
   )
 }

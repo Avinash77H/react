@@ -10,7 +10,7 @@ function App() {
   const [newFilteredData, setNewFilteredData] = useState([]);
   const [filterData, setFilterData] = useState({});
   const { searchText, selectValue } = filterData;
-  const [updateTask,setUpdataTask] = useState("")
+  
 
   useEffect(() => {
   
@@ -33,11 +33,9 @@ function App() {
       }
     }
 
-  }, [filterData]);
+  }, [taskList,searchText,selectValue]);
 
-  useEffect((taskList,newFilteredData)=>{
-    taskList
-  },[newFilteredData])
+  
   console.log("taskList Data:",taskList);
   console.log("newFilteredData:",newFilteredData);
 
