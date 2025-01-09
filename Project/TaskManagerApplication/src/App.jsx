@@ -10,6 +10,8 @@ function App() {
   const [newFilteredData, setNewFilteredData] = useState([]);
   const [filterData, setFilterData] = useState({});
   const { searchText, selectValue } = filterData;
+  const [selectedTask,setSelectedTask] = useState(null);
+  // console.log("selectedTask:",selectedTask)
   
 
   useEffect(() => {
@@ -41,11 +43,13 @@ function App() {
 
   return (
     <>
-      <div className="h-screen ml-20 ">
+      <div className="ml-20 ">
         <TaskForm addTask={setTaskList} />
         <FilterBar  setFilterData={setFilterData} />
-        <TaskList taskList={taskList} setTaskList={setTaskList} newFilteredData={newFilteredData} setNewFilteredData={setNewFilteredData}/>
-        <TaskCard />
+       <div className="flex mt-8 w-screen justify-around items-center">
+       <TaskList taskList={taskList} setTaskList={setTaskList} newFilteredData={newFilteredData} setNewFilteredData={setNewFilteredData} setSelectedTask={setSelectedTask}/>
+       <TaskCard selectedTask={selectedTask} setSelectedTask={setSelectedTask}/>
+       </div>
       </div>
     </>
   );

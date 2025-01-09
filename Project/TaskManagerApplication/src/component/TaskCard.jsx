@@ -1,15 +1,20 @@
 import React from 'react'
 
-function TaskCard() {
+function TaskCard({selectedTask,setSelectedTask}) {
+  console.log("selectedTask:",selectedTask)
   return (
+    
     <div className='taskcard_container'>
+     {selectedTask &&  <div>
       <h1>Task Card</h1>
       <div className='info_container'>
-        <p>Task Name : Get up Early</p>
-        <p>Task Description : Do some meditation and heavy Exercises</p>
-        <p>Status: Completed</p>
+        <p>Task Name : {selectedTask.taskName}</p>
+        <p>Task Description : {selectedTask.taskDescription}</p>
+        <p>Status: {selectedTask.status}</p>
       </div>
-      <div className='close_icon'><span>X</span></div>
+      <div className='close_icon' onClick={()=>setSelectedTask(null)}><span>X</span></div>
+      </div>}
+     
     </div>
   )
 }

@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import { ImSad2 } from "react-icons/im";
 
 
-function TaskList({taskList,setTaskList,newFilteredData,setNewFilteredData}) {
+function TaskList({taskList,setTaskList,newFilteredData,setNewFilteredData,setSelectedTask}) {
 
 
-  
+
   
 
   function handleDelete(taskIndex){
@@ -117,6 +117,7 @@ function TaskList({taskList,setTaskList,newFilteredData,setNewFilteredData}) {
                 <div>{item.status === 'Pending'?<button className='pending_btn' onClick={()=>handleStatus(index)}>Pending</button>:<button className='completed_btn' onClick={()=>handleStatus(index)}>Completed</button>}</div>
                 <button className='edit_btn' onClick={()=>handleEdit(index)}>Edit</button>
                 <button className='delete_btn' onClick={()=>handleDelete(index)}>Delete</button>
+                <button className='view_Details_btn' onClick={()=>setSelectedTask(item)}>View Details</button>
             </div>
         </div>
       )):taskList.map((item,index)=> (
@@ -132,6 +133,7 @@ function TaskList({taskList,setTaskList,newFilteredData,setNewFilteredData}) {
             <div>{item.status === 'Pending'?<button className='pending_btn' onClick={()=>handleStatus(index)}>Pending</button>:<button className='completed_btn' onClick={()=>handleStatus(index)}>Completed</button>}</div>
             <button className='edit_btn' onClick={()=>handleEdit(index)}>Edit</button>
             <button className='delete_btn' onClick={()=>handleDelete(index)}>Delete</button>
+            <button className='view_Details_btn' onClick={()=>setSelectedTask(item)}>View Details</button>
         </div>
     </div>
         
