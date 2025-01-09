@@ -5,10 +5,6 @@ function FilterBar({setFilterData}) {
   const[searchText,setSearchText] = useState("");
   const[selectValue,setSelectValue] = useState('All');
 
- 
-
-  
-  
 
   function handleSearchData(){
     setFilterData({searchText,selectValue});
