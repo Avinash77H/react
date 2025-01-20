@@ -4,7 +4,7 @@ function TaskCard({selectedTask,setSelectedTask}) {
   console.log("selectedTask:",selectedTask)
   return (
     
-    <div className='taskcard_container'>
+    <div className={`taskcard_container hidden`}>
      {selectedTask &&  <div>
       <h1>Task Card</h1>
       <div className='info_container'>
