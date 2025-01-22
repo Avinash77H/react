@@ -67,7 +67,7 @@ const AddExpense = () => {
               <th className="border border-gray-300 p-2">Amount</th>
               <th className="border border-gray-300 p-2">Category</th>
               <th className="border border-gray-300 p-2">Date</th>
-              {/* <th className="border border-gray-300 p-2">Action</th> */}
+              {/*  <th className="border border-gray-300 p-2">Action</th> */}
             </tr>
           </thead>
           <tbody>
