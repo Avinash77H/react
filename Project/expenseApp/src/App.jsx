@@ -1,14 +1,18 @@
 
 import AddExpense from "./components/AddExpense"
 import ExpenseItem from "./components/ExpenseItem"
+import ExpenseList from "./components/ExpenseList"
 
 function App() {
 
 
   return (
     <>
-    <AddExpense/>
-    {/* <ExpenseItem/> */}
+   <div className="p-8">
+   <AddExpense/>
+   <ExpenseList/>
+   </div>
+    
     </>
   )
 }
