@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer component{
+@layer components{
     .header{
         @apply bg-purple-600 text-white text-3xl font-black text-center
     }
     .active{
         @apply text-black 
     }
-   
+   .btn{
+        @apply bg-green-500 text-white rounded-md px-2 py-1
+   }
 }

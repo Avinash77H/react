@@ -1,13 +1,13 @@
-import './App.css'
 
-
+import FocusInput from './components/focusInput'
 
 
 function App() {
+
+  
   return (
     <div>
-      <label >Name:</label>
-      <input type="text" />
+     <FocusInput/>
     </div>
   )
 }
