@@ -3,7 +3,7 @@ import { useState,useRef } from 'react';
 
 function FocusInput() {
     const[focus,setFocus] = useState(false);
-    const inputField = useRef();
+    const  inputField = useRef();
     
     function handleClick(){
       if(focus){
