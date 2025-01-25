@@ -7,7 +7,7 @@ function FocusInput() {
     
     function handleClick(){
       if(focus){
-        setFocus(!focus);
+        setFocus(!focus );
       }
       else{
         setFocus(true)
