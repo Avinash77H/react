@@ -25,5 +25,3 @@ const [expense,setExpense] = useState({
 }
 
 export default ExpenseContext
-
-

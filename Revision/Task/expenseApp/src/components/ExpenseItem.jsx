@@ -3,7 +3,13 @@ import { Context } from '../Context/ExpenseContext'
 
 function ExpenseItem() {
   const {expense,setExpense,expenseList,setExpenseList} = useContext(Context);
-  console.log(expense)
+  console.log(expense);
+  console.log(expenseList)
+  
+
+  function handleAddExpense(){
+   setExpenseList((prev)=>([...prev,expense]));
+  }
   return (
     <>
     {/* Input Section */}
@@ -31,12 +37,13 @@ function ExpenseItem() {
       className="border border-gray-300 rounded-lg p-2 w-full focus:outline-none focus:ring focus:ring-green-300"
       onChange={(e)=>setExpense((prev)=>({...prev,Date:e.target.value}))}
     />
-    <button className="bg-green-500 text-white rounded-lg px-4 py-2 hover:bg-green-600">
+    <button className="bg-green-500 text-white rounded-lg px-4 py-2 hover:bg-green-600" onClick={handleAddExpense}>
       Add Expense
     </button>
   </div>
   </>
   )
+  
 }
 
 export default ExpenseItem
