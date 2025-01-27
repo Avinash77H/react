@@ -10,6 +10,7 @@ function ExpenseItem() {
   function handleAddExpense(){
    setExpenseList((prev)=>([...prev,expense]));
   }
+  
   return (
     <>
     {/* Input Section */}
