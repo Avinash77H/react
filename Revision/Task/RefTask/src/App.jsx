@@ -1,5 +1,9 @@
 
-import FocusInput from './components/focusInput'
+// import FocusInput from './components/focusInput'
+// import Scrolling from './components/Scrolling'
+import PlayAndPause from './components/PlayAndPause'
+
+import "./App.css"
 
 
 function App() {
@@ -7,7 +11,11 @@ function App() {
   
   return (
     <div>
-     <FocusInput/>
+
+     {/*<FocusInput/>*/}
+     {/*<Scrolling/> */}
+     <PlayAndPause/>
+
     </div>
   )
 }
