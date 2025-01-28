@@ -5,20 +5,27 @@ import { useNavigate } from 'react-router-dom';
 function Login() {
   const[loginData,setLoginData] = useState({loginName:"",loginPassword:""})
   const{isAuth,setIsAuth,authData,setAuthData,setCurrentUser} = useAuth();
-  console.log(isAuth);
+
   const navigate = useNavigate();
   
   function handleSubmit(e){
     e.preventDefault();
-   const user = authData.filter((user)=>(
+
+    // check valid user or not
+   const user = authData.find((user)=>(
       user.userName === loginData.loginName && user.userPassword === loginData.loginPassword
    ));
-   console.log("currentUser:",user);
-   if(user.length !== 0){
+
+ 
+
+   // if valid user then user redirect into profile page
+   
+   if(user){
      setIsAuth(true);
      setCurrentUser(user);
      navigate('/profile')
-   }else{
+   }
+   else{
    alert("Name or Password is not Valid");
     return
    }

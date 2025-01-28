@@ -1,17 +1,13 @@
-import './App.css'
+import "./App.css";
 
-import Layout from "./pages/Layout"
-
-
+import Layout from "./pages/Layout";
 
 function App() {
   return (
     <div>
-    
-      <Layout/>
-      
+      <Layout />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

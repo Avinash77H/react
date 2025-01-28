@@ -46,7 +46,9 @@ function Layout() {
             },
             {
               path:":id",
-              element:<CareerDetails/>,
+              element:<ProtectedRoutes>
+                <CareerDetails/>
+              </ProtectedRoutes>,
               loader:CareerDetailsData,
               errorElement:<div>Failed to load careerDetailsData Data</div>,
             }

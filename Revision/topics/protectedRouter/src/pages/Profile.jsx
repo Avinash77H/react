@@ -1,16 +1,17 @@
 import React from 'react'
 import { useAuth } from '../Context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 function Profile() {
-  const{authData,isAuth,currentUser,setIsAuth,setCurrentUser} = useAuth();
+  const{currentUser,setIsAuth,setCurrentUser} = useAuth();
+  const nevigate = useNavigate();
 
   function handleLogOut(){
     setIsAuth(false);
     setCurrentUser({});
+    nevigate('/login');
   }
 
-  console.log(currentUser);
-  
   return (
     <div>
       <h1 className='header'>Profile page</h1>
