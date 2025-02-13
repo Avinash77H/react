@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+@layer component {
+  .btn{
+    @apply text-white bg-green-500 rounded-md px-2 py-1
+  }
+}
