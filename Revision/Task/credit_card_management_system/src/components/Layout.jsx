@@ -11,6 +11,7 @@ import Histrory from '../pages/Histrory'
 import ManageCard from '../pages/ManageCard'
 import CreateCard from '../pages/CreateCard'
 import ModifyCard from '../pages/ModifyCard'
+import AddExpense from '../pages/AddExpense'
 
 
 function Layout() {
@@ -71,6 +72,10 @@ function Layout() {
                     element:<ModifyCard/>
                   }
                 ]
+              },
+              {
+                path:"addExpense",
+                element:<AddExpense/>
               }
             
           ],

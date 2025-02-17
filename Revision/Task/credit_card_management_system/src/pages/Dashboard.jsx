@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 
 function Dashboard() {
   return (
-    <div>
+    <div className='w-full'>
       <Outlet/>
     </div>
   )

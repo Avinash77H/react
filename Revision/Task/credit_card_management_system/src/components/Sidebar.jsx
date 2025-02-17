@@ -20,8 +20,7 @@ function Sidebar() {
   };
 
   return (
-    <div className="w-64">
-      <div className="h-screen bg-[#A9B5DF] text-gray-100 flex flex-col shadow-lg">
+      <div className="h-screen w-64 bg-[#A9B5DF] text-gray-100 flex flex-col shadow-lg">
         <div className="p-6">
           <h1 className="text-2xl font-bold text-[#7886C7]">Menu</h1>
         </div>
@@ -94,9 +93,17 @@ function Sidebar() {
               </NavLink>
             </div>
           </div>
+
+          {/* add expense */}
+
+          <NavLink
+            to="/addExpense"
+            className="hover:bg-[#7886C7] p-2 cursor-pointer rounded transition duration-200"
+          >
+            Add Expense
+          </NavLink>
         </nav>
       </div>
-    </div>
   );
 }
 

@@ -4,8 +4,8 @@ import { NavLink, Outlet } from 'react-router-dom';
 
 function Navbar() {
   return (
-    <div>
-      <nav className='flex justify-between items-center p-4 bg-[#7886C7] text-white shadow-lg'>
+    <div className=''>
+      <nav className='sticky top-0 flex justify-between items-center p-4 bg-[#7886C7] text-white shadow-lg'>
         <div className='flex items-center'>
           <img src={cards_icon} alt="card-image" className='size-12 rounded-full'/>
           <span className='ml-2 text-2xl font-semibold'>Credit</span>
