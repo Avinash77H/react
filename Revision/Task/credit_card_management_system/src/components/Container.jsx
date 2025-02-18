@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 
 function Container() {
   return (
-    <div className="flex w-full ">
+    <div className="flex">
       <Sidebar />
       <Outlet />
     </div>

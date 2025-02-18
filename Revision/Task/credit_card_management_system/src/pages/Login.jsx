@@ -33,7 +33,7 @@ const Login = () => {
         >
           Login
         </button>
-        {error && <p className="text-red-500 text-center mt-2">{error}</p>}
+        {/* {error && <p className="text-red-500 text-center mt-2">{error}</p>}  */}
         <button
           onClick={() => {/* Redirect to Signup */}}
           className="w-full text-blue-500 mt-4 hover:underline"
