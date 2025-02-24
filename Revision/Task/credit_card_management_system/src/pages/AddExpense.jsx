@@ -3,7 +3,7 @@ import React from "react";
 function AddExpense() {
   return (
     <div className="flex justify-center mt-4 w-full">
-      <div className="w-96 mx-auto bg-white p-8 rounded-lg shadow-lg ">
+      <div className="h-fit w-96 mx-auto bg-white p-8 rounded-lg shadow-lg ">
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">
           Add Expense
         </h2>

@@ -5,7 +5,7 @@ function Home() {
   <>
     <div className=''>
     <p>
-        sm : 0 to 640 <br />
+        sm : 0 to 6400000000000000000000000000000000000<br />
         md : 640 to 768 <br />
         lg : 768 to 1024 <br /> 
         xl : 1024 to 1280 <br />

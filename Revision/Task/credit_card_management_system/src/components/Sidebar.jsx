@@ -3,7 +3,9 @@ import { NavLink } from "react-router-dom";
 import { IoIosArrowDown, IoIosArrowUp ,IoIosCreate } from "react-icons/io";
 import { MdCreateNewFolder } from "react-icons/md";
 
-function Sidebar() {
+function Sidebar({isSide}) {
+
+  console.log("isSide:",isSide);
 
   /* DashBoard */
   const [isDashBoard, setIsDashBoard] = useState(false);
@@ -20,31 +22,29 @@ function Sidebar() {
   };
 
   return (
-      <div className="h-screen w-64 bg-[#A9B5DF] text-gray-100 flex flex-col shadow-lg">
-        <div className="p-6">
-          <h1 className="text-2xl font-bold text-[#7886C7]">Menu</h1>
-        </div>
-        <nav className="flex flex-col p-4 space-y-2">
+      <div className={`${isSide ? 'max-sm:translate-x-0' : 'max-sm:-translate-x-full'} fixed sm:relative z-50 sm:visible h-screen w-36 lg:w-52 md:w-46 sm:w-36 text-sm bg-[#A9B5DF] text-gray-100 sm:flex flex-col shadow-lg transition-transform duration-600 ease-in-out`}>
+        
+        <nav className="flex flex-col p-2 md:p-4 space-y-2 ">
           <NavLink
             to="/home"
-            className="hover:bg-[#7886C7] p-2 cursor-pointer rounded transition duration-200"
+            className="w-full  hover:bg-[#7886C7] p-2 cursor-pointer rounded transition duration-200"
           >
             Home
           </NavLink>
 
           {/* DashBoard */}
 
-          <div>
+          <div className="border-2 border-green-500">
             <div
               onClick={toggleDashBoard}
-              className="p-2 cursor-pointer rounded transition duration-200 flex items-center gap-2 hover:bg-[#7886C7] hover:text-white"
+              className="p-1 md:p-2 cursor-pointer rounded transition duration-200 flex items-center gap-2 hover:bg-[#7886C7] hover:text-white"
             >
-              Dashboard {isDashBoard ? <IoIosArrowUp /> : <IoIosArrowDown />}
+              Dashboard {isDashBoard ? <IoIosArrowUp className="text-xl"/> : <IoIosArrowDown className="text-xl"/>}
             </div>
             <div
               className={`flex flex-col space-y-2 transform transition-all duration-300 ease-in-out ${
                 isDashBoard
-                  ? "max-h-40 opacity-100 mt-2"
+                  ? "max-h-40 opacity-100 mt-2 "
                   : "max-h-0 opacity-0"
               } overflow-hidden`}
             >
@@ -68,9 +68,9 @@ function Sidebar() {
           <div>
             <div
               onClick={toggleManageCard}
-              className="p-2 cursor-pointer rounded transition duration-200 flex items-center gap-2 hover:bg-[#7886C7] hover:text-white"
+              className="p-1 md:p-2 cursor-pointer rounded transition duration-200 flex items-center gap-2 hover:bg-[#7886C7] hover:text-white"
             >
-              Manage Card {isManageCard ? <IoIosArrowUp /> : <IoIosArrowDown />}
+              Manage Card {isManageCard ? <IoIosArrowUp className="text-xl"/> : <IoIosArrowDown className="text-xl"/>}
             </div>
             <div
               className={`flex flex-col space-y-2 transform transition-all duration-300 ease-in-out ${
@@ -81,13 +81,13 @@ function Sidebar() {
             >
               <NavLink
                 to="managecard/createcard"
-                className="p-2 rounded pl-4 transition duration-200  text-white hover:bg-[#7886C7] hover:text-white flex items-center gap-2"
+                className="p-2 rounded pl-2 md:pl-4 transition duration-200  text-white hover:bg-[#7886C7] hover:text-white flex items-center gap-2"
               >
                 Create Card <MdCreateNewFolder/>
               </NavLink>
               <NavLink
                 to="managecard/modifycard"
-                className="p-2 rounded pl-4 transition duration-200  text-white hover:bg-[#7886C7] hover:text-white flex items-center gap-2"
+                className="p-2 rounded pl-2 md:pl-4 transition duration-200  text-white hover:bg-[#7886C7] hover:text-white flex items-center gap-2"
               >
                 Modify Card <IoIosCreate/>
               </NavLink>
